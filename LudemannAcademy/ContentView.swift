@@ -8,9 +8,33 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var username: String = ""
+
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack(alignment: .leading) {
+            SuperTextField(
+                placeholder: Text("Placeholder Text").foregroundColor(.black),
+                text: $username
+            )
+            .padding(.bottom, 4)
+            SuperTextField(
+                placeholder: Text("Placeholder Text").foregroundColor(.black),
+                text: $username
+            )
+
+            Button(action: {
+                print("Button action")
+            }) {
+                Text("Place Order")
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 20)
+                    .background(Color.black)
+                    .foregroundColor(.white)
+                    .cornerRadius(28)
+                    .padding(.horizontal, 42)
+            }
+        }
+        .padding()
     }
 }
 
@@ -18,4 +42,28 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
+}
+
+struct SuperTextField: View {
+
+    var placeholder: Text
+    @Binding var text: String
+    var editingChanged: (Bool)->() = { _ in }
+    var commit: ()->() = { }
+
+    var body: some View {
+        ZStack(alignment: .leading) {
+            TextField("", text: $text, onEditingChanged: editingChanged, onCommit: commit)
+                .padding(.horizontal, 16)
+                .padding(.vertical, 24)
+                .background(Color.red)
+                .cornerRadius(16)
+
+            if text.isEmpty {
+                placeholder
+                    .padding(.leading, 16)
+            }
+        }
+    }
+
 }
