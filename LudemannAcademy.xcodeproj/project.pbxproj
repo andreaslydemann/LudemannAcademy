@@ -13,7 +13,9 @@
 		E19C7AF525E1721A00B3AEF3 /* SharpSans-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E19C7AF125E1721A00B3AEF3 /* SharpSans-Bold.otf */; };
 		E19C7AF625E1721A00B3AEF3 /* SharpSans-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = E19C7AF225E1721A00B3AEF3 /* SharpSans-Medium.otf */; };
 		E19C7AF725E1721A00B3AEF3 /* OcrB-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E19C7AF325E1721A00B3AEF3 /* OcrB-Regular.ttf */; };
-		E19C7AF825E1721A00B3AEF3 /* AllisonScript-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = E19C7AF425E1721A00B3AEF3 /* AllisonScript-Regular.otf */; };
+		E19C7B0025E172C800B3AEF3 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19C7AFF25E172C800B3AEF3 /* Font.swift */; };
+		E19C7B0C25E173FF00B3AEF3 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19C7B0B25E173FF00B3AEF3 /* Color.swift */; };
+		E19C7B1325E1742A00B3AEF3 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E19C7B1225E1742A00B3AEF3 /* Colors.xcassets */; };
 		E1D52FD125E04E100049C642 /* LudemannAcademyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D52FD025E04E100049C642 /* LudemannAcademyApp.swift */; };
 		E1D52FD325E04E100049C642 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D52FD225E04E100049C642 /* ContentView.swift */; };
 		E1D52FD525E04E110049C642 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1D52FD425E04E110049C642 /* Assets.xcassets */; };
@@ -56,7 +58,9 @@
 		E19C7AF125E1721A00B3AEF3 /* SharpSans-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SharpSans-Bold.otf"; sourceTree = "<group>"; };
 		E19C7AF225E1721A00B3AEF3 /* SharpSans-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SharpSans-Medium.otf"; sourceTree = "<group>"; };
 		E19C7AF325E1721A00B3AEF3 /* OcrB-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OcrB-Regular.ttf"; sourceTree = "<group>"; };
-		E19C7AF425E1721A00B3AEF3 /* AllisonScript-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AllisonScript-Regular.otf"; sourceTree = "<group>"; };
+		E19C7AFF25E172C800B3AEF3 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		E19C7B0B25E173FF00B3AEF3 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		E19C7B1225E1742A00B3AEF3 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		E1D52FCD25E04E100049C642 /* LudemannAcademy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LudemannAcademy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1D52FD025E04E100049C642 /* LudemannAcademyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LudemannAcademyApp.swift; sourceTree = "<group>"; };
 		E1D52FD225E04E100049C642 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -115,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				E19C7AEF25E171C800B3AEF3 /* Resources */,
+				E19C7AFE25E1724C00B3AEF3 /* Source */,
 				E19C7AD525E1718E00B3AEF3 /* AcademyUI.h */,
 				E19C7AD625E1718E00B3AEF3 /* Info.plist */,
 			);
@@ -134,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				E19C7AF025E171ED00B3AEF3 /* Fonts */,
+				E19C7B1225E1742A00B3AEF3 /* Colors.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -141,12 +147,20 @@
 		E19C7AF025E171ED00B3AEF3 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				E19C7AF425E1721A00B3AEF3 /* AllisonScript-Regular.otf */,
 				E19C7AF325E1721A00B3AEF3 /* OcrB-Regular.ttf */,
 				E19C7AF125E1721A00B3AEF3 /* SharpSans-Bold.otf */,
 				E19C7AF225E1721A00B3AEF3 /* SharpSans-Medium.otf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		E19C7AFE25E1724C00B3AEF3 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				E19C7AFF25E172C800B3AEF3 /* Font.swift */,
+				E19C7B0B25E173FF00B3AEF3 /* Color.swift */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 		E1D52FC425E04E100049C642 = {
@@ -325,6 +339,7 @@
 				TargetAttributes = {
 					E19C7AD225E1718E00B3AEF3 = {
 						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1230;
 					};
 					E19C7ADA25E1718F00B3AEF3 = {
 						CreatedOnToolsVersion = 12.3;
@@ -371,7 +386,7 @@
 			files = (
 				E19C7AF625E1721A00B3AEF3 /* SharpSans-Medium.otf in Resources */,
 				E19C7AF525E1721A00B3AEF3 /* SharpSans-Bold.otf in Resources */,
-				E19C7AF825E1721A00B3AEF3 /* AllisonScript-Regular.otf in Resources */,
+				E19C7B1325E1742A00B3AEF3 /* Colors.xcassets in Resources */,
 				E19C7AF725E1721A00B3AEF3 /* OcrB-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,6 +428,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E19C7B0025E172C800B3AEF3 /* Font.swift in Sources */,
+				E19C7B0C25E173FF00B3AEF3 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,6 +490,7 @@
 		E19C7AE425E1718F00B3AEF3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -493,6 +511,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -502,6 +521,7 @@
 		E19C7AE525E1718F00B3AEF3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -531,6 +551,7 @@
 		E19C7AE625E1718F00B3AEF3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = XX77A4QKHR;
@@ -551,6 +572,7 @@
 		E19C7AE725E1718F00B3AEF3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = XX77A4QKHR;
