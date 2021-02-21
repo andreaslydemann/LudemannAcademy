@@ -24,6 +24,8 @@
 		E105DF1E25E2E65F00D14B66 /* SharpSans-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E105DF1825E2E65F00D14B66 /* SharpSans-Bold.otf */; };
 		E105DF2425E2E67000D14B66 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E105DF2325E2E67000D14B66 /* Colors.xcassets */; };
 		E105DF2525E2E67000D14B66 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E105DF2325E2E67000D14B66 /* Colors.xcassets */; };
+		E19202D525E323A200F802DF /* BundleProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19202D425E323A200F802DF /* BundleProvider.swift */; };
+		E19202D625E323A200F802DF /* BundleProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19202D425E323A200F802DF /* BundleProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,7 @@
 		E105DF1725E2E65F00D14B66 /* SharpSans-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SharpSans-Medium.otf"; sourceTree = "<group>"; };
 		E105DF1825E2E65F00D14B66 /* SharpSans-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SharpSans-Bold.otf"; sourceTree = "<group>"; };
 		E105DF2325E2E67000D14B66 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		E19202D425E323A200F802DF /* BundleProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +124,7 @@
 				E105DF0625E2E60200D14B66 /* Source */,
 				E105DEBF25E2E4FB00D14B66 /* AcademyUI.h */,
 				E105DEC025E2E4FB00D14B66 /* Info.plist */,
+				E19202D425E323A200F802DF /* BundleProvider.swift */,
 			);
 			path = AcademyUI;
 			sourceTree = "<group>";
@@ -346,6 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E105DF0F25E2E63E00D14B66 /* Font.swift in Sources */,
+				E19202D525E323A200F802DF /* BundleProvider.swift in Sources */,
 				E105DF0825E2E62100D14B66 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,6 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E105DF1025E2E63E00D14B66 /* Font.swift in Sources */,
+				E19202D625E323A200F802DF /* BundleProvider.swift in Sources */,
 				E105DF0925E2E62200D14B66 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

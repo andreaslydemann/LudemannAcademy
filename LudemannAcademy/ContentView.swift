@@ -15,12 +15,12 @@ struct ContentView: View {
         VStack(alignment: .leading) {
             SuperTextField(
                 placeholder: Text("Placeholder Text")
-                    .font(.SharpSansBold(size: 24)).foregroundColor(.white),
+                    .font(.SharpSansMedium(size: 18)).foregroundColor(.academySecondaryText),
                 text: $username
             )
             .padding(.bottom, 4)
             SuperTextField(
-                placeholder: Text("Placeholder Text").font(.SharpSansMedium(size: 24)).foregroundColor(.black),
+                placeholder: Text("Placeholder Text").font(.SharpSansMedium(size: 18)).foregroundColor(.academySecondaryText),
                 text: $username
             )
 
@@ -30,7 +30,7 @@ struct ContentView: View {
                 Text("Place Order")
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, 20)
-                    .background(Color.black)
+                    .background(Color.academyPrimary)
                     .foregroundColor(.white)
                     .cornerRadius(28)
                     .padding(.horizontal, 42)
@@ -58,7 +58,7 @@ struct SuperTextField: View {
             TextField("", text: $text, onEditingChanged: editingChanged, onCommit: commit)
                 .padding(.horizontal, 16)
                 .padding(.vertical, 24)
-                .background(Color.red)
+                .background(Color.academySurface)
                 .cornerRadius(16)
 
             if text.isEmpty {
