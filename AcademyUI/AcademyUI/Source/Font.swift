@@ -6,7 +6,7 @@ extension Font {
     // MARK: - Setup
 
     static public func loadCustomFonts() {
-        if let fontUrl = BundleProvider.currentBundle().url(forResource: "SharpSans-Bold", withExtension: "otf"),
+        if let fontUrl = BundleProvider.currentBundle.url(forResource: "SharpSans-Bold", withExtension: "otf"),
            let dataProvider = CGDataProvider(url: fontUrl as CFURL),
            let newFont = CGFont(dataProvider) {
             var error: Unmanaged<CFError>?

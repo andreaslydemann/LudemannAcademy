@@ -3,7 +3,7 @@ import Foundation
 internal class BundleProvider {
     private init() { }
 
-    static func currentBundle() -> Bundle {
-        Bundle(for: self)
+    static var currentBundle: Bundle {
+        return Bundle(for: self)
     }
 }

@@ -14,13 +14,13 @@ struct ContentView: View {
     var body: some View {
         VStack(alignment: .leading) {
             SuperTextField(
-                placeholder: Text("Placeholder Text")
+                placeholder: Text("E-mail")
                     .font(.SharpSansMedium(size: 18)).foregroundColor(.academySecondaryText),
                 text: $username
             )
             .padding(.bottom, 4)
             SuperTextField(
-                placeholder: Text("Placeholder Text").font(.SharpSansMedium(size: 18)).foregroundColor(.academySecondaryText),
+                placeholder: Text("Password").font(.SharpSansMedium(size: 18)).foregroundColor(.academySecondaryText),
                 text: $username
             )
 
