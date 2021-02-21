@@ -6,9 +6,14 @@
 //
 
 import SwiftUI
+import AcademyUI
 
 @main
 struct LudemannAcademyApp: App {
+    init() {
+        FontLoader.loadFont()
+    }
+
     var body: some Scene {
         WindowGroup {
             ContentView()

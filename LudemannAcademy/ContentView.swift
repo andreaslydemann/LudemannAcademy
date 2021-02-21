@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AcademyUI
 
 struct ContentView: View {
     @State var username: String = ""
@@ -13,12 +14,13 @@ struct ContentView: View {
     var body: some View {
         VStack(alignment: .leading) {
             SuperTextField(
-                placeholder: Text("Placeholder Text").foregroundColor(.black),
+                placeholder: Text("Placeholder Text")
+                    .font(.SharpSansBold(size: 24)).foregroundColor(.white),
                 text: $username
             )
             .padding(.bottom, 4)
             SuperTextField(
-                placeholder: Text("Placeholder Text").foregroundColor(.black),
+                placeholder: Text("Placeholder Text").font(.SharpSansMedium(size: 24)).foregroundColor(.black),
                 text: $username
             )
 
