@@ -124,7 +124,6 @@
 				E105DF0625E2E60200D14B66 /* Source */,
 				E105DEBF25E2E4FB00D14B66 /* AcademyUI.h */,
 				E105DEC025E2E4FB00D14B66 /* Info.plist */,
-				E19202D425E323A200F802DF /* BundleProvider.swift */,
 			);
 			path = AcademyUI;
 			sourceTree = "<group>";
@@ -150,6 +149,7 @@
 		E105DF0625E2E60200D14B66 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				E19202D425E323A200F802DF /* BundleProvider.swift */,
 				E105DF0725E2E62100D14B66 /* Color.swift */,
 				E105DF0E25E2E63E00D14B66 /* Font.swift */,
 			);

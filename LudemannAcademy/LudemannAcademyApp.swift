@@ -11,7 +11,7 @@ import AcademyUI
 @main
 struct LudemannAcademyApp: App {
     init() {
-        FontLoader.loadFont()
+        Font.loadFonts()
     }
 
     var body: some Scene {

@@ -1,9 +1,12 @@
 import Foundation
 import SwiftUI
 
-public class FontLoader {
-    static public func loadFont() {
-        if let fontUrl = Bundle(for: FontLoader.self).url(forResource: "SharpSans-Bold", withExtension: "otf"),
+extension Font {
+
+    // MARK: - Setup
+
+    static public func loadCustomFonts() {
+        if let fontUrl = BundleProvider.currentBundle().url(forResource: "SharpSans-Bold", withExtension: "otf"),
            let dataProvider = CGDataProvider(url: fontUrl as CFURL),
            let newFont = CGFont(dataProvider) {
             var error: Unmanaged<CFError>?
@@ -17,9 +20,9 @@ public class FontLoader {
             assertionFailure("Error loading font")
         }
     }
-}
 
-extension Font {
+    // MARK: - Fonts
+
     public static func OcrB(size: CGFloat) -> Font {
         return Font.custom("OcrB-Regular", size: size)
     }
