@@ -24,6 +24,10 @@
 		E105DF1E25E2E65F00D14B66 /* SharpSans-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E105DF1825E2E65F00D14B66 /* SharpSans-Bold.otf */; };
 		E105DF2425E2E67000D14B66 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E105DF2325E2E67000D14B66 /* Colors.xcassets */; };
 		E105DF2525E2E67000D14B66 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E105DF2325E2E67000D14B66 /* Colors.xcassets */; };
+		E10D26CF25E4060F003A21A0 /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10D26CE25E4060F003A21A0 /* Spacing.swift */; };
+		E10D26D025E4060F003A21A0 /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10D26CE25E4060F003A21A0 /* Spacing.swift */; };
+		E10D26D625E419D0003A21A0 /* TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10D26D525E419D0003A21A0 /* TextStyle.swift */; };
+		E10D26D725E419D0003A21A0 /* TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10D26D525E419D0003A21A0 /* TextStyle.swift */; };
 		E19202D525E323A200F802DF /* BundleProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19202D425E323A200F802DF /* BundleProvider.swift */; };
 		E19202D625E323A200F802DF /* BundleProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19202D425E323A200F802DF /* BundleProvider.swift */; };
 /* End PBXBuildFile section */
@@ -60,6 +64,8 @@
 		E105DF1725E2E65F00D14B66 /* SharpSans-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SharpSans-Medium.otf"; sourceTree = "<group>"; };
 		E105DF1825E2E65F00D14B66 /* SharpSans-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SharpSans-Bold.otf"; sourceTree = "<group>"; };
 		E105DF2325E2E67000D14B66 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		E10D26CE25E4060F003A21A0 /* Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacing.swift; sourceTree = "<group>"; };
+		E10D26D525E419D0003A21A0 /* TextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyle.swift; sourceTree = "<group>"; };
 		E19202D425E323A200F802DF /* BundleProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -152,6 +158,8 @@
 				E19202D425E323A200F802DF /* BundleProvider.swift */,
 				E105DF0725E2E62100D14B66 /* Color.swift */,
 				E105DF0E25E2E63E00D14B66 /* Font.swift */,
+				E10D26CE25E4060F003A21A0 /* Spacing.swift */,
+				E10D26D525E419D0003A21A0 /* TextStyle.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -349,7 +357,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E10D26D625E419D0003A21A0 /* TextStyle.swift in Sources */,
 				E105DF0F25E2E63E00D14B66 /* Font.swift in Sources */,
+				E10D26CF25E4060F003A21A0 /* Spacing.swift in Sources */,
 				E19202D525E323A200F802DF /* BundleProvider.swift in Sources */,
 				E105DF0825E2E62100D14B66 /* Color.swift in Sources */,
 			);
@@ -367,7 +377,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E10D26D725E419D0003A21A0 /* TextStyle.swift in Sources */,
 				E105DF1025E2E63E00D14B66 /* Font.swift in Sources */,
+				E10D26D025E4060F003A21A0 /* Spacing.swift in Sources */,
 				E19202D625E323A200F802DF /* BundleProvider.swift in Sources */,
 				E105DF0925E2E62200D14B66 /* Color.swift in Sources */,
 			);

@@ -14,26 +14,26 @@ struct ContentView: View {
     var body: some View {
         VStack(alignment: .leading) {
             SuperTextField(
-                placeholder: Text("E-mail")
-                    .font(.medium(size: .regular)).foregroundColor(.academySecondaryText),
+                placeholder: AnyView(Text("E-mail").textStyle(.regularMediumSecondary)),
                 text: $username
             )
-            .padding(.bottom, 4)
+            .padding(.bottom, Spacing.tiny.rawValue)
             SuperTextField(
-                placeholder: Text("Password").font(.medium(size: .regular)).foregroundColor(.academySecondaryText),
+                placeholder:
+                    AnyView(Text("Password").textStyle(.regularMediumSecondary)),
                 text: $username
             )
-
+            .padding(.bottom, Spacing.xxLarge.rawValue)
             Button(action: {
                 print("Button action")
             }) {
                 Text("Place Order")
+                    .textStyle(.regularBold, color: .academyButtonContent)
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, 20)
-                    .background(Color.academyPrimary)
-                    .foregroundColor(.white)
+                    .background(Color.academyButtonBackground)
                     .cornerRadius(28)
-                    .padding(.horizontal, 42)
+                    .padding(.horizontal, 20)
             }
         }
         .padding()
@@ -48,8 +48,7 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 struct SuperTextField: View {
-
-    var placeholder: Text
+    var placeholder: AnyView
     @Binding var text: String
     var editingChanged: (Bool)->() = { _ in }
     var commit: ()->() = { }
@@ -57,14 +56,14 @@ struct SuperTextField: View {
     var body: some View {
         ZStack(alignment: .leading) {
             TextField("", text: $text, onEditingChanged: editingChanged, onCommit: commit)
-                .padding(.horizontal, 16)
-                .padding(.vertical, 24)
+                .padding(.horizontal, Spacing.small.rawValue)
+                .padding(.vertical, Spacing.medium.rawValue)
                 .background(Color.academySurface)
                 .cornerRadius(16)
 
             if text.isEmpty {
                 placeholder
-                    .padding(.leading, 16)
+                    .padding(.leading, Spacing.small.rawValue)
             }
         }
     }
