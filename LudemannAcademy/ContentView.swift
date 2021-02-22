@@ -15,12 +15,12 @@ struct ContentView: View {
         VStack(alignment: .leading) {
             SuperTextField(
                 placeholder: Text("E-mail")
-                    .font(.SharpSansMedium(size: 18)).foregroundColor(.academySecondaryText),
+                    .font(.medium(size: .regular)).foregroundColor(.academySecondaryText),
                 text: $username
             )
             .padding(.bottom, 4)
             SuperTextField(
-                placeholder: Text("Password").font(.SharpSansMedium(size: 18)).foregroundColor(.academySecondaryText),
+                placeholder: Text("Password").font(.medium(size: .regular)).foregroundColor(.academySecondaryText),
                 text: $username
             )
 
@@ -43,6 +43,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .preferredColorScheme(.dark)
     }
 }
 
