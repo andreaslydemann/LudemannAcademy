@@ -54,20 +54,6 @@ extension Font {
         }
     }
 
-    // MARK: - Fonts
-
-    public static func ocrB(size: FontSize) -> Font {
-        return Font.custom(.ocrB, size: size)
-    }
-
-    public static func medium(size: FontSize) -> Font {
-        return Font.custom(.medium, size: size)
-    }
-
-    public static func bold(size: FontSize) -> Font {
-        return Font.custom(.bold, size: size)
-    }
-
     static func custom(_ name: FontType, size: FontSize) -> Font {
         return Font.custom(name.rawValue, size: size.rawValue)
     }
