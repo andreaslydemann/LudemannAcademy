@@ -18,6 +18,7 @@ struct ContentView: View {
             Image(named: "logo")
                 .resizable()
                 .frame(width: 80, height: 80)
+                .shadow(color: .init(red: 0, green: 0, blue: 0, opacity: 0.25), radius: 4, x: 0, y: 4)
                 .padding(.bottom, Spacing.small.rawValue)
 
             Text("Lüdemann Academy")
