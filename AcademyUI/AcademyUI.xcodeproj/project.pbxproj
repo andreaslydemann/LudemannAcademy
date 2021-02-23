@@ -30,6 +30,10 @@
 		E10D26D725E419D0003A21A0 /* TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10D26D525E419D0003A21A0 /* TextStyle.swift */; };
 		E11CA7FF25E5ABEA0077AF63 /* CGFloat+ContentWidth.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11CA7FE25E5ABEA0077AF63 /* CGFloat+ContentWidth.swift */; };
 		E11CA80025E5ABEA0077AF63 /* CGFloat+ContentWidth.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11CA7FE25E5ABEA0077AF63 /* CGFloat+ContentWidth.swift */; };
+		E11CA80A25E5B3B60077AF63 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E11CA80925E5B3B60077AF63 /* Images.xcassets */; };
+		E11CA80B25E5B3B60077AF63 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E11CA80925E5B3B60077AF63 /* Images.xcassets */; };
+		E11CA81125E5B4E80077AF63 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11CA81025E5B4E80077AF63 /* Image.swift */; };
+		E11CA81225E5B4E80077AF63 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11CA81025E5B4E80077AF63 /* Image.swift */; };
 		E19202D525E323A200F802DF /* BundleProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19202D425E323A200F802DF /* BundleProvider.swift */; };
 		E19202D625E323A200F802DF /* BundleProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19202D425E323A200F802DF /* BundleProvider.swift */; };
 /* End PBXBuildFile section */
@@ -69,6 +73,8 @@
 		E10D26CE25E4060F003A21A0 /* Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacing.swift; sourceTree = "<group>"; };
 		E10D26D525E419D0003A21A0 /* TextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyle.swift; sourceTree = "<group>"; };
 		E11CA7FE25E5ABEA0077AF63 /* CGFloat+ContentWidth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+ContentWidth.swift"; sourceTree = "<group>"; };
+		E11CA80925E5B3B60077AF63 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E11CA81025E5B4E80077AF63 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		E19202D425E323A200F802DF /* BundleProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -151,6 +157,7 @@
 			children = (
 				E105DF1525E2E64A00D14B66 /* Fonts */,
 				E105DF2325E2E67000D14B66 /* Colors.xcassets */,
+				E11CA80925E5B3B60077AF63 /* Images.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -164,6 +171,7 @@
 				E105DF0E25E2E63E00D14B66 /* Font.swift */,
 				E10D26CE25E4060F003A21A0 /* Spacing.swift */,
 				E10D26D525E419D0003A21A0 /* TextStyle.swift */,
+				E11CA81025E5B4E80077AF63 /* Image.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -331,6 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E105DF1D25E2E65F00D14B66 /* SharpSans-Bold.otf in Resources */,
+				E11CA80A25E5B3B60077AF63 /* Images.xcassets in Resources */,
 				E105DF2425E2E67000D14B66 /* Colors.xcassets in Resources */,
 				E105DF1B25E2E65F00D14B66 /* SharpSans-Medium.otf in Resources */,
 				E105DF1925E2E65F00D14B66 /* OcrB-Regular.ttf in Resources */,
@@ -349,6 +358,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E105DF1E25E2E65F00D14B66 /* SharpSans-Bold.otf in Resources */,
+				E11CA80B25E5B3B60077AF63 /* Images.xcassets in Resources */,
 				E105DF2525E2E67000D14B66 /* Colors.xcassets in Resources */,
 				E105DF1C25E2E65F00D14B66 /* SharpSans-Medium.otf in Resources */,
 				E105DF1A25E2E65F00D14B66 /* OcrB-Regular.ttf in Resources */,
@@ -374,6 +384,7 @@
 				E105DF0F25E2E63E00D14B66 /* Font.swift in Sources */,
 				E10D26CF25E4060F003A21A0 /* Spacing.swift in Sources */,
 				E19202D525E323A200F802DF /* BundleProvider.swift in Sources */,
+				E11CA81125E5B4E80077AF63 /* Image.swift in Sources */,
 				E105DF0825E2E62100D14B66 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,6 +406,7 @@
 				E105DF1025E2E63E00D14B66 /* Font.swift in Sources */,
 				E10D26D025E4060F003A21A0 /* Spacing.swift in Sources */,
 				E19202D625E323A200F802DF /* BundleProvider.swift in Sources */,
+				E11CA81225E5B4E80077AF63 /* Image.swift in Sources */,
 				E105DF0925E2E62200D14B66 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

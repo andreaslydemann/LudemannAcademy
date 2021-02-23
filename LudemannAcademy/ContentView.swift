@@ -12,8 +12,19 @@ struct ContentView: View {
     @State var username: String = ""
 
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack(alignment: .center) {
             Spacer()
+
+            Image(named: "logo")
+                .resizable()
+                .frame(width: 80, height: 80)
+                .padding(.bottom, Spacing.small.rawValue)
+
+            Text("Lüdemann Academy")
+                .textStyle(.largeBold)
+                .textCase(.uppercase)
+                .padding(.bottom, Spacing.xxxxLarge.rawValue)
+
             SuperTextField(
                 placeholder: AnyView(Text("E-mail").textStyle(.regularMediumSecondary).opacity(0.3)),
                 text: $username
@@ -26,27 +37,27 @@ struct ContentView: View {
             )
             .padding(.bottom, Spacing.xSmall.rawValue)
 
-            Text("Forgot Password?")
-                .textStyle(.smallMediumSecondary)
-                .textCase(.uppercase)
-                .padding(.leading, Spacing.small.rawValue)
-                .padding(.bottom, Spacing.xxLarge.rawValue)
+            HStack {
+                Text("Forgot Password?")
+                    .textStyle(.smallMediumSecondary)
+                    .textCase(.uppercase)
+                    .padding(.leading, Spacing.small.rawValue)
+                    .padding(.bottom, Spacing.xxLarge.rawValue)
 
-            HStack(alignment: .center) {
-                Spacer()
-                Button(action: {
-                    print("Button action")
-                }) {
-                    Text("Place Order")
-                        .textStyle(.regularBold, color: .academyButtonContent)
-                        .frame(maxWidth: .academyButtonWidth)
-                        .padding(.vertical, 20)
-                        .background(Color.academyButtonBackground)
-                        .cornerRadius(28)
-                }
                 Spacer()
             }
-            
+
+            Button(action: {
+                print("Button action")
+            }) {
+                Text("Log In")
+                    .textStyle(.regularBold, color: .academyButtonContent)
+                    .frame(maxWidth: .academyButtonWidth)
+                    .padding(.vertical, 20)
+                    .background(Color.academyButtonBackground)
+                    .cornerRadius(28)
+            }
+
             Spacer()
         }
         .padding()
