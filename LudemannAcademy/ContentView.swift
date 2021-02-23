@@ -13,30 +13,45 @@ struct ContentView: View {
 
     var body: some View {
         VStack(alignment: .leading) {
+            Spacer()
             SuperTextField(
-                placeholder: AnyView(Text("E-mail").textStyle(.regularMediumSecondary)),
+                placeholder: AnyView(Text("E-mail").textStyle(.regularMediumSecondary).opacity(0.3)),
                 text: $username
             )
             .padding(.bottom, Spacing.tiny.rawValue)
             SuperTextField(
                 placeholder:
-                    AnyView(Text("Password").textStyle(.regularMediumSecondary)),
+                    AnyView(Text("Password").textStyle(.regularMediumSecondary).opacity(0.3)),
                 text: $username
             )
-            .padding(.bottom, Spacing.xxLarge.rawValue)
-            Button(action: {
-                print("Button action")
-            }) {
-                Text("Place Order")
-                    .textStyle(.regularBold, color: .academyButtonContent)
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical, 20)
-                    .background(Color.academyButtonBackground)
-                    .cornerRadius(28)
-                    .padding(.horizontal, 20)
+            .padding(.bottom, Spacing.xSmall.rawValue)
+
+            Text("Forgot Password?")
+                .textStyle(.smallMediumSecondary)
+                .textCase(.uppercase)
+                .padding(.leading, Spacing.small.rawValue)
+                .padding(.bottom, Spacing.xxLarge.rawValue)
+
+            HStack(alignment: .center) {
+                Spacer()
+                Button(action: {
+                    print("Button action")
+                }) {
+                    Text("Place Order")
+                        .textStyle(.regularBold, color: .academyButtonContent)
+                        .frame(maxWidth: .academyButtonWidth)
+                        .padding(.vertical, 20)
+                        .background(Color.academyButtonBackground)
+                        .cornerRadius(28)
+                }
+                Spacer()
             }
+            
+            Spacer()
         }
         .padding()
+        .background(Color.academyBackground)
+        .edgesIgnoringSafeArea(.all)
     }
 }
 
