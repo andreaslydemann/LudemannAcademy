@@ -24,7 +24,7 @@ struct ContentView: View {
             Text("Lüdemann Academy")
                 .textStyle(.largeBold)
                 .textCase(.uppercase)
-                .padding(.bottom, Spacing.xxxxLarge.rawValue)
+                .padding(.bottom, Spacing.xxxLarge.rawValue)
 
             SuperTextField(
                 placeholder: AnyView(Text("E-mail").textStyle(.regularMediumSecondary).opacity(0.3)),
@@ -43,7 +43,7 @@ struct ContentView: View {
                     .textStyle(.smallMediumSecondary)
                     .textCase(.uppercase)
                     .padding(.leading, Spacing.small.rawValue)
-                    .padding(.bottom, Spacing.xxLarge.rawValue)
+                    .padding(.bottom, Spacing.xxxLarge.rawValue)
 
                 Spacer()
             }
