@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E105DF5B25E2E87800D14B66 /* AcademyUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E105DF5A25E2E87800D14B66 /* AcademyUI.framework */; };
 		E105DF5C25E2E87800D14B66 /* AcademyUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E105DF5A25E2E87800D14B66 /* AcademyUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E12095C525E6D476000E9E6F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12095C425E6D476000E9E6F /* LoginView.swift */; };
 		E1D52FD125E04E100049C642 /* LudemannAcademyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D52FD025E04E100049C642 /* LudemannAcademyApp.swift */; };
 		E1D52FD325E04E100049C642 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D52FD225E04E100049C642 /* ContentView.swift */; };
 		E1D52FD525E04E110049C642 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1D52FD425E04E110049C642 /* Assets.xcassets */; };
@@ -50,6 +51,7 @@
 
 /* Begin PBXFileReference section */
 		E105DF5A25E2E87800D14B66 /* AcademyUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AcademyUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E12095C425E6D476000E9E6F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		E1D52FCD25E04E100049C642 /* LudemannAcademy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LudemannAcademy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1D52FD025E04E100049C642 /* LudemannAcademyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LudemannAcademyApp.swift; sourceTree = "<group>"; };
 		E1D52FD225E04E100049C642 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 			children = (
 				E1D52FD025E04E100049C642 /* LudemannAcademyApp.swift */,
 				E1D52FD225E04E100049C642 /* ContentView.swift */,
+				E12095C425E6D476000E9E6F /* LoginView.swift */,
 				E1D52FD425E04E110049C642 /* Assets.xcassets */,
 				E1D52FD925E04E110049C642 /* Info.plist */,
 				E1D52FD625E04E110049C642 /* Preview Content */,
@@ -287,6 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E12095C525E6D476000E9E6F /* LoginView.swift in Sources */,
 				E1D52FD325E04E100049C642 /* ContentView.swift in Sources */,
 				E1D52FD125E04E100049C642 /* LudemannAcademyApp.swift in Sources */,
 			);
