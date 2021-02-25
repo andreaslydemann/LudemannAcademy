@@ -2,9 +2,10 @@ import SwiftUI
 import AcademyUI
 
 struct LoginView: View {
-    @State private var username: String = ""
+    @State private var email: String = ""
     @State private var password: String = ""
     @State private var showingAlert = false
+    @State private var editing = false
 
     var body: some View {
         VStack {
@@ -19,17 +20,13 @@ struct LoginView: View {
                 .textCase(.uppercase)
                 .padding(.bottom, Spacing.xxxLarge.rawValue)
 
-            SuperTextField(
-                placeholder: AnyView(Text("E-mail").textStyle(.regularMediumSecondary).opacity(0.3)),
-                text: $username
-            )
-            .padding(.bottom, Spacing.tiny.rawValue)
-            SuperTextField(
-                placeholder:
-                    AnyView(Text("Password").textStyle(.regularMediumSecondary).opacity(0.3)),
-                text: $password
-            )
-            .padding(.bottom, Spacing.xSmall.rawValue)
+            TextField("E-mail", text: self.$email)
+                .textFieldStyle(AcademyTextFieldStyle())
+                .padding(.bottom, Spacing.xSmall.rawValue)
+
+            TextField("Password", text: self.$password)
+                .textFieldStyle(AcademyTextFieldStyle())
+                .padding(.bottom, Spacing.xSmall.rawValue)
 
             HStack {
                 Button(action: {
@@ -60,8 +57,8 @@ struct LoginView: View {
             }
         }
         .padding(.horizontal)
+        .adaptToKeyboard()
         .onTapDismissKeyboard()
-        .keyboardAdaptive()
     }
 }
 
@@ -72,24 +69,13 @@ struct LoginView_Previews: PreviewProvider {
     }
 }
 
-struct SuperTextField: View {
-    var placeholder: AnyView
-    @Binding var text: String
-    var editingChanged: (Bool)->() = { _ in }
-    var commit: ()->() = { }
-
-    var body: some View {
-        ZStack(alignment: .leading) {
-            TextField("", text: $text, onEditingChanged: editingChanged, onCommit: commit)
-                .padding(.horizontal, Spacing.small.rawValue)
-                .padding(.vertical, Spacing.medium.rawValue)
-                .background(Color.academySurface)
-                .cornerRadius(16)
-
-            if text.isEmpty {
-                placeholder
-                    .padding(.leading, Spacing.small.rawValue)
-            }
-        }
+struct AcademyTextFieldStyle: TextFieldStyle {
+    func _body(configuration: TextField<Self._Label>) -> some View {
+        configuration
+        .padding(.horizontal, Spacing.small.rawValue)
+        .padding(.vertical, Spacing.medium.rawValue)
+        .background(Color.academySurface)
+        .textStyle(.regularMediumSecondary)
+        .cornerRadius(16)
     }
 }
