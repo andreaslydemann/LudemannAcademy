@@ -35,13 +35,16 @@ public enum TextStyle: CaseIterable {
     case tinyMediumSecondary
 }
 
-extension Text {
-    public func textStyle(_ style: TextStyle, color: Color? = nil) -> Self {
-        let base: Text
+struct TextStyleModifier: ViewModifier {
+    let style: TextStyle
+    let color: Color?
+
+    func body(content: Content) -> some View {
+        let base: AnyView
         if let color = color {
-            base = self.foregroundColor(color)
+            base = AnyView(content.foregroundColor(color))
         } else {
-            base = self
+            base = AnyView(content)
         }
 
         switch style {
@@ -108,5 +111,11 @@ extension Text {
         case .tinyMediumSecondary:
             return base.font(.custom(.medium, size: .tiny)).foregroundColor(.academySecondaryText)
         }
-   }
+    }
+}
+
+extension View {
+    public func textStyle(_ style: TextStyle, color: Color? = nil) -> some View {
+        ModifiedContent(content: self, modifier: TextStyleModifier(style: style, color: color))
+    }
 }
