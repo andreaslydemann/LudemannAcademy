@@ -45,10 +45,13 @@ struct LoginView: View {
 
                 TextField("E-mail", text: self.$email)
                     .textFieldStyle(AcademyTextFieldStyle())
+                    .autocapitalization(.none)
                     .padding(.bottom, Spacing.xSmall.rawValue)
 
-                TextField("Password", text: self.$password)
+
+                SecureField("Password", text: self.$password)
                     .textFieldStyle(AcademyTextFieldStyle())
+                    .autocapitalization(.none)
                     .padding(.bottom, Spacing.xSmall.rawValue)
 
                 HStack {
@@ -103,7 +106,7 @@ struct AcademyTextFieldStyle: TextFieldStyle {
 
 struct AlertView: View {
     @Binding var showingAlert: Bool
-    @State var scale: CGFloat = 0
+    @State var scale: CGFloat = 0.1
 
     var body: some View {
         ZStack {
