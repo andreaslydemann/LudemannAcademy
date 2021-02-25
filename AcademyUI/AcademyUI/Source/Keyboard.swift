@@ -28,7 +28,7 @@ struct KeyboardAdaptive: ViewModifier {
     func body(content: Content) -> some View {
         content
             .padding(.bottom, keyboardHeight)
-            .animation(.default)
+            .animation(.spring())
             .onReceive(Publishers.keyboardHeight) { self.keyboardHeight = $0 }
     }
 }
