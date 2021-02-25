@@ -28,14 +28,14 @@
 		E10D26D025E4060F003A21A0 /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10D26CE25E4060F003A21A0 /* Spacing.swift */; };
 		E10D26D625E419D0003A21A0 /* TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10D26D525E419D0003A21A0 /* TextStyle.swift */; };
 		E10D26D725E419D0003A21A0 /* TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10D26D525E419D0003A21A0 /* TextStyle.swift */; };
-		E11CA7FF25E5ABEA0077AF63 /* CGFloat+ContentWidth.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11CA7FE25E5ABEA0077AF63 /* CGFloat+ContentWidth.swift */; };
-		E11CA80025E5ABEA0077AF63 /* CGFloat+ContentWidth.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11CA7FE25E5ABEA0077AF63 /* CGFloat+ContentWidth.swift */; };
+		E11CA7FF25E5ABEA0077AF63 /* ContentWidth.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11CA7FE25E5ABEA0077AF63 /* ContentWidth.swift */; };
+		E11CA80025E5ABEA0077AF63 /* ContentWidth.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11CA7FE25E5ABEA0077AF63 /* ContentWidth.swift */; };
 		E11CA80A25E5B3B60077AF63 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E11CA80925E5B3B60077AF63 /* Images.xcassets */; };
 		E11CA80B25E5B3B60077AF63 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E11CA80925E5B3B60077AF63 /* Images.xcassets */; };
 		E11CA81125E5B4E80077AF63 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11CA81025E5B4E80077AF63 /* Image.swift */; };
 		E11CA81225E5B4E80077AF63 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11CA81025E5B4E80077AF63 /* Image.swift */; };
-		E12095BE25E6D3F2000E9E6F /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12095BD25E6D3F2000E9E6F /* Keyboard.swift */; };
-		E12095BF25E6D3F2000E9E6F /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12095BD25E6D3F2000E9E6F /* Keyboard.swift */; };
+		E12095BE25E6D3F2000E9E6F /* KeyboardActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12095BD25E6D3F2000E9E6F /* KeyboardActions.swift */; };
+		E12095BF25E6D3F2000E9E6F /* KeyboardActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12095BD25E6D3F2000E9E6F /* KeyboardActions.swift */; };
 		E19202D525E323A200F802DF /* BundleProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19202D425E323A200F802DF /* BundleProvider.swift */; };
 		E19202D625E323A200F802DF /* BundleProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19202D425E323A200F802DF /* BundleProvider.swift */; };
 /* End PBXBuildFile section */
@@ -74,10 +74,10 @@
 		E105DF2325E2E67000D14B66 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		E10D26CE25E4060F003A21A0 /* Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacing.swift; sourceTree = "<group>"; };
 		E10D26D525E419D0003A21A0 /* TextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyle.swift; sourceTree = "<group>"; };
-		E11CA7FE25E5ABEA0077AF63 /* CGFloat+ContentWidth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+ContentWidth.swift"; sourceTree = "<group>"; };
+		E11CA7FE25E5ABEA0077AF63 /* ContentWidth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentWidth.swift; sourceTree = "<group>"; };
 		E11CA80925E5B3B60077AF63 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E11CA81025E5B4E80077AF63 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
-		E12095BD25E6D3F2000E9E6F /* Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
+		E12095BD25E6D3F2000E9E6F /* KeyboardActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardActions.swift; sourceTree = "<group>"; };
 		E19202D425E323A200F802DF /* BundleProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -168,14 +168,14 @@
 		E105DF0625E2E60200D14B66 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				E11CA7FD25E5AB670077AF63 /* Extensions */,
 				E19202D425E323A200F802DF /* BundleProvider.swift */,
 				E105DF0725E2E62100D14B66 /* Color.swift */,
 				E105DF0E25E2E63E00D14B66 /* Font.swift */,
 				E10D26CE25E4060F003A21A0 /* Spacing.swift */,
 				E10D26D525E419D0003A21A0 /* TextStyle.swift */,
 				E11CA81025E5B4E80077AF63 /* Image.swift */,
-				E12095BD25E6D3F2000E9E6F /* Keyboard.swift */,
+				E11CA7FE25E5ABEA0077AF63 /* ContentWidth.swift */,
+				E12095BD25E6D3F2000E9E6F /* KeyboardActions.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -188,14 +188,6 @@
 				E105DF1725E2E65F00D14B66 /* SharpSans-Medium.otf */,
 			);
 			path = Fonts;
-			sourceTree = "<group>";
-		};
-		E11CA7FD25E5AB670077AF63 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				E11CA7FE25E5ABEA0077AF63 /* CGFloat+ContentWidth.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -383,9 +375,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E12095BE25E6D3F2000E9E6F /* Keyboard.swift in Sources */,
+				E12095BE25E6D3F2000E9E6F /* KeyboardActions.swift in Sources */,
 				E10D26D625E419D0003A21A0 /* TextStyle.swift in Sources */,
-				E11CA7FF25E5ABEA0077AF63 /* CGFloat+ContentWidth.swift in Sources */,
+				E11CA7FF25E5ABEA0077AF63 /* ContentWidth.swift in Sources */,
 				E105DF0F25E2E63E00D14B66 /* Font.swift in Sources */,
 				E10D26CF25E4060F003A21A0 /* Spacing.swift in Sources */,
 				E19202D525E323A200F802DF /* BundleProvider.swift in Sources */,
@@ -406,9 +398,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E12095BF25E6D3F2000E9E6F /* Keyboard.swift in Sources */,
+				E12095BF25E6D3F2000E9E6F /* KeyboardActions.swift in Sources */,
 				E10D26D725E419D0003A21A0 /* TextStyle.swift in Sources */,
-				E11CA80025E5ABEA0077AF63 /* CGFloat+ContentWidth.swift in Sources */,
+				E11CA80025E5ABEA0077AF63 /* ContentWidth.swift in Sources */,
 				E105DF1025E2E63E00D14B66 /* Font.swift in Sources */,
 				E10D26D025E4060F003A21A0 /* Spacing.swift in Sources */,
 				E19202D625E323A200F802DF /* BundleProvider.swift in Sources */,
