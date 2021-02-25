@@ -4,17 +4,7 @@ import UIKit
 
 struct ContentView: View {
     var body: some View {
-        GeometryReader { geometry in
-            ScrollView(.vertical) {
-                VStack {
-                    LoginView()
-                }
-                .frame(width: geometry.size.width)
-                .frame(minHeight: geometry.size.height)
-            }
-        }
-        .background(Color.academyBackground)
-        .edgesIgnoringSafeArea(.all)
+        LoginScreen()
     }
 }
 
