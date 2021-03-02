@@ -40,6 +40,10 @@ extension Color {
         Color("academy_button_content", bundle: BundleProvider.currentBundle)
     }
 
+    public static var academyButtonSecondaryContent: Color {
+        Color("academy_button_content_secondary", bundle: BundleProvider.currentBundle)
+    }
+
     public static var academyButtonBackground: Color {
         Color("academy_button_background", bundle: BundleProvider.currentBundle)
     }

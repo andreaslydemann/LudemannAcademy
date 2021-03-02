@@ -3,7 +3,7 @@ import AcademyUI
 
 struct LoginScreen: View {
     @State private var showingAlert = false
-
+    
     var body: some View {
         ZStack {
             GeometryReader { geometry in
@@ -13,7 +13,7 @@ struct LoginScreen: View {
                         .frame(minHeight: geometry.size.height)
                 }
             }
-
+            
             if showingAlert {
                 AlertView(showingAlert: $showingAlert)
             }
@@ -28,56 +28,61 @@ struct LoginView: View {
     @State private var password: String = ""
     @State private var editing = false
     @Binding var showingAlert: Bool
-
+    
     var body: some View {
         ZStack {
             VStack {
-                Image(named: "logo")
-                    .resizable()
-                    .frame(width: 80, height: 80)
-                    .shadow(color: .init(red: 0, green: 0, blue: 0, opacity: 0.25), radius: 4, x: 0, y: 4)
-                    .padding(.bottom, Spacing.small.rawValue)
-
-                Text("Lüdemann Academy")
-                    .textStyle(.largeBold)
-                    .textCase(.uppercase)
-                    .padding(.bottom, Spacing.xxxLarge.rawValue)
-
+                HStack(spacing: Spacing.small.rawValue) {
+                    Image(named: "logo")
+                        .resizable()
+                        .frame(width: 60, height: 60)
+                        .shadow(color: .init(red: 0, green: 0, blue: 0, opacity: 0.25), radius: 4, x: 0, y: 4)
+                    
+                    VStack(alignment: .leading) {
+                        Text("Lüdemann")
+                            .textStyle(.title2Bold)
+                            .textCase(.uppercase)
+                        Text("Academy")
+                            .textStyle(.title2Bold)
+                            .textCase(.uppercase)
+                    }
+                }
+                .padding(.bottom, Spacing.small.rawValue)
+                
+                Text("Keep up with modern iOS practices.")
+                    .textStyle(.regularMedium)
+                
+                Text("Become an in-demand iOS developer..")
+                    .textStyle(.regularMedium)
+                    .padding(.bottom, Spacing.xxLarge.rawValue)
+                
                 TextField("E-mail", text: self.$email)
                     .textFieldStyle(AcademyTextFieldStyle())
                     .autocapitalization(.none)
                     .padding(.bottom, Spacing.xSmall.rawValue)
-
-
+                
+                
                 SecureField("Password", text: self.$password)
                     .textFieldStyle(AcademyTextFieldStyle())
                     .autocapitalization(.none)
                     .padding(.bottom, Spacing.xSmall.rawValue)
-
+                
                 HStack {
-                    Button(action: {
+                    Button("Log in", action: {
                         showingAlert.toggle()
-                    }) {
-                        Text("Forgot Password?")
-                            .textStyle(.smallMediumSecondary)
-                            .textCase(.uppercase)
-                    }
+                    })
+                    .buttonStyle(.smallLink)
+                    .textCase(.uppercase)
                     .padding(.leading, Spacing.small.rawValue)
                     .padding(.bottom, Spacing.xxxLarge.rawValue)
-
+                    
                     Spacer()
                 }
-
-                Button(action: {
+                
+                Button("Log in", action: {
                     print("Button action")
-                }) {
-                    Text("Log In")
-                        .textStyle(.regularBold, color: .academyButtonContent)
-                        .frame(maxWidth: .academyButtonWidth)
-                        .padding(.vertical, 20)
-                        .background(Color.academyButtonBackground)
-                        .cornerRadius(28)
-                }
+                })
+                .buttonStyle(.large)
             }
             .padding(.horizontal)
             .adaptToKeyboard()
@@ -107,7 +112,7 @@ struct AcademyTextFieldStyle: TextFieldStyle {
 struct AlertView: View {
     @Binding var showingAlert: Bool
     @State var scale: CGFloat = 0.1
-
+    
     var body: some View {
         ZStack {
             Rectangle()
@@ -115,21 +120,21 @@ struct AlertView: View {
                 .opacity(0.7)
                 .onTapGesture {
                     showingAlert.toggle()
-
+                    
                 }
-
+            
             GeometryReader { geometry in
                 VStack {
                     Text("Forgot your password?")
                         .textStyle(.largeBold)
                         .padding(.bottom, Spacing.tiny.rawValue)
-
+                    
                     Text("No problem. Write me an email and I’ll help you out.")
                         .textStyle(.regularMediumSecondary)
                         .fixedSize(horizontal: false, vertical: true)
                         .multilineTextAlignment(.center)
                         .padding(.bottom, Spacing.medium.rawValue)
-
+                    
                     Button(action: {
                         showingAlert.toggle()
                     }, label: {

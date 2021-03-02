@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E2AC4F125ED8C88007D2AB1 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2AC4F025ED8C88007D2AB1 /* Button.swift */; };
+		8E2AC4F225ED8C88007D2AB1 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2AC4F025ED8C88007D2AB1 /* Button.swift */; };
+		8E2AC4F825EE218A007D2AB1 /* View+ConditionalViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2AC4F725EE218A007D2AB1 /* View+ConditionalViewModifiers.swift */; };
+		8E2AC4F925EE218A007D2AB1 /* View+ConditionalViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2AC4F725EE218A007D2AB1 /* View+ConditionalViewModifiers.swift */; };
 		E105DEC625E2E4FB00D14B66 /* AcademyUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E105DEBC25E2E4FB00D14B66 /* AcademyUI.framework */; };
 		E105DECB25E2E4FB00D14B66 /* AcademyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E105DECA25E2E4FB00D14B66 /* AcademyUITests.swift */; };
 		E105DECD25E2E4FB00D14B66 /* AcademyUI.h in Headers */ = {isa = PBXBuildFile; fileRef = E105DEBF25E2E4FB00D14B66 /* AcademyUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -58,6 +62,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8E2AC4F025ED8C88007D2AB1 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		8E2AC4F725EE218A007D2AB1 /* View+ConditionalViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+ConditionalViewModifiers.swift"; sourceTree = "<group>"; };
 		E105DEBC25E2E4FB00D14B66 /* AcademyUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AcademyUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E105DEBF25E2E4FB00D14B66 /* AcademyUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AcademyUI.h; sourceTree = "<group>"; };
 		E105DEC025E2E4FB00D14B66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -176,6 +182,8 @@
 				E11CA81025E5B4E80077AF63 /* Image.swift */,
 				E11CA7FE25E5ABEA0077AF63 /* ContentWidth.swift */,
 				E12095BD25E6D3F2000E9E6F /* KeyboardActions.swift */,
+				8E2AC4F025ED8C88007D2AB1 /* Button.swift */,
+				8E2AC4F725EE218A007D2AB1 /* View+ConditionalViewModifiers.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -377,11 +385,13 @@
 			files = (
 				E12095BE25E6D3F2000E9E6F /* KeyboardActions.swift in Sources */,
 				E10D26D625E419D0003A21A0 /* TextStyle.swift in Sources */,
+				8E2AC4F825EE218A007D2AB1 /* View+ConditionalViewModifiers.swift in Sources */,
 				E11CA7FF25E5ABEA0077AF63 /* ContentWidth.swift in Sources */,
 				E105DF0F25E2E63E00D14B66 /* Font.swift in Sources */,
 				E10D26CF25E4060F003A21A0 /* Spacing.swift in Sources */,
 				E19202D525E323A200F802DF /* BundleProvider.swift in Sources */,
 				E11CA81125E5B4E80077AF63 /* Image.swift in Sources */,
+				8E2AC4F125ED8C88007D2AB1 /* Button.swift in Sources */,
 				E105DF0825E2E62100D14B66 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -400,11 +410,13 @@
 			files = (
 				E12095BF25E6D3F2000E9E6F /* KeyboardActions.swift in Sources */,
 				E10D26D725E419D0003A21A0 /* TextStyle.swift in Sources */,
+				8E2AC4F925EE218A007D2AB1 /* View+ConditionalViewModifiers.swift in Sources */,
 				E11CA80025E5ABEA0077AF63 /* ContentWidth.swift in Sources */,
 				E105DF1025E2E63E00D14B66 /* Font.swift in Sources */,
 				E10D26D025E4060F003A21A0 /* Spacing.swift in Sources */,
 				E19202D625E323A200F802DF /* BundleProvider.swift in Sources */,
 				E11CA81225E5B4E80077AF63 /* Image.swift in Sources */,
+				8E2AC4F225ED8C88007D2AB1 /* Button.swift in Sources */,
 				E105DF0925E2E62200D14B66 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
