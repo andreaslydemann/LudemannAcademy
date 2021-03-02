@@ -210,6 +210,8 @@ struct AcademyButtonStyle: ButtonStyle {
                             .stroke($1, lineWidth: 2)
                     )
                 }
+                .scaleEffect(configuration.isPressed ? 0.95 : 1)
+                .animation(.linear(duration: 0.05))
         }
     }
 }
