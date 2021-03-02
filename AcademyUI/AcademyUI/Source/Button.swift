@@ -87,99 +87,126 @@ extension ButtonColorScheme {
     }
 }
 
+public struct ButtonDimensions {
+    let width: CGFloat?
+    let height: CGFloat?
+    
+    public init(width: CGFloat? = nil, height: CGFloat? = nil) {
+        self.width = width
+        self.height = height
+    }
+}
+
+extension ButtonDimensions {
+    func getSuggestedDimensions(for size: ButtonSize, padding: EdgeInsets) -> (width: CGFloat, height: CGFloat) {
+        let width: CGFloat
+        let height: CGFloat
+        
+        switch size {
+        case .large:
+            width = self.width ?? .suggestedLargeButtonWidth
+            height = self.height ?? .suggestedLargeButtonHeight
+        case .medium:
+            width = self.width ?? .suggestedMediumButtonWidth
+            height = self.height ?? .suggestedMediumButtonHeight
+        case .small:
+            width = self.width ?? .suggestedSmallButtonWidth
+            height = self.height ?? .suggestedSmallButtonHeight
+        }
+        
+        return (width: width, height: height)
+    }
+}
+
 struct ButtonStyleModifier: ViewModifier {
     let style: ButtonType
+    let dimensions: ButtonDimensions
+    let padding: EdgeInsets?
     
     func body(content: Content) -> some View {
+        let padding = self.padding ??
+            .init(top: .zero, leading: 16, bottom: .zero, trailing: 16)
+        let buttonStyle: AcademyButtonStyle
+        
         switch style {
         case .large:
-            return AnyView(content.buttonStyle(AcademyButtonStyle(size: .large, scheme: ButtonColorScheme(content: .academyButtonContent, background: .academyButtonBackground))))
+            buttonStyle = AcademyButtonStyle(size: .large, scheme: ButtonColorScheme(content: .academyButtonContent, background: .academyButtonBackground), textStyle: .regularBold, dimensions: dimensions, padding: padding)
         case .largeSecondary:
-            return AnyView(content.buttonStyle(AcademyButtonStyle(size: .large, scheme: ButtonColorScheme(content: .academyButtonSecondaryContent, background: .academyButtonSecondaryBackground))))
+            buttonStyle = AcademyButtonStyle(size: .large, scheme: ButtonColorScheme(content: .academyButtonSecondaryContent, background: .academyButtonSecondaryBackground), textStyle: .regularBold, dimensions: dimensions, padding: padding)
         case .largeOutlined:
-            return AnyView(content.buttonStyle(AcademyButtonStyle(size: .large, scheme: ButtonColorScheme(content: .academyText, background: .clear, border: .academyText))))
+            buttonStyle = AcademyButtonStyle(size: .large, scheme: ButtonColorScheme(content: .academyText, background: .clear, border: .academyText), textStyle: .regularBold, dimensions: dimensions, padding: padding)
         case .medium:
-            return AnyView(content.buttonStyle(AcademyButtonStyle(size: .medium, scheme: ButtonColorScheme(content: .academyButtonContent, background: .academyButtonBackground))))
+            buttonStyle = AcademyButtonStyle(size: .medium, scheme: ButtonColorScheme(content: .academyButtonContent, background: .academyButtonBackground), textStyle: .regularBold, dimensions: dimensions, padding: padding)
         case .mediumSecondary:
-            return AnyView(content.buttonStyle(AcademyButtonStyle(size: .medium, scheme: ButtonColorScheme(content: .academyButtonSecondaryContent, background: .academyButtonSecondaryBackground))))
+            buttonStyle = AcademyButtonStyle(size: .medium, scheme: ButtonColorScheme(content: .academyButtonSecondaryContent, background: .academyButtonSecondaryBackground), textStyle: .regularBold, dimensions: dimensions, padding: padding)
         case .mediumOutlined:
-            return AnyView(content.buttonStyle(AcademyButtonStyle(size: .medium, scheme: ButtonColorScheme(content: .academyText, background: .clear, border: .academyText))))
+            buttonStyle = AcademyButtonStyle(size: .medium, scheme: ButtonColorScheme(content: .academyText, background: .clear, border: .academyText), textStyle: .regularBold, dimensions: dimensions, padding: padding)
         case .small:
-            return AnyView(content.buttonStyle(AcademyButtonStyle(size: .small, scheme: ButtonColorScheme(content: .academyButtonContent, background: .academyButtonBackground))))
+            buttonStyle = AcademyButtonStyle(size: .small, scheme: ButtonColorScheme(content: .academyButtonContent, background: .academyButtonBackground), textStyle: .smallBold, dimensions: dimensions, padding: padding)
         case .smallSecondary:
-            return AnyView(content.buttonStyle(AcademyButtonStyle(size: .small, scheme: ButtonColorScheme(content: .academyButtonSecondaryContent, background: .academyButtonSecondaryBackground))))
+            buttonStyle = AcademyButtonStyle(size: .small, scheme: ButtonColorScheme(content: .academyButtonSecondaryContent, background: .academyButtonSecondaryBackground), textStyle: .smallBold, dimensions: dimensions, padding: padding)
         case .smallLink:
-            return AnyView(content.buttonStyle(AcademyButtonStyle(size: .small, scheme: ButtonColorScheme(content: .academyText, background: .clear))))
+            buttonStyle = AcademyButtonStyle(size: .small, scheme: ButtonColorScheme(content: .academySecondaryText, background: .clear), textStyle: .smallMedium, dimensions: dimensions, alignment: .leading, padding: self.padding ?? .init())
         }
+        
+        return AnyView(content.buttonStyle(buttonStyle))
     }
 }
 
 extension View {
-    public func buttonStyle(_ type: ButtonType) -> some View {
-        ModifiedContent(content: self, modifier: ButtonStyleModifier(style: type))
+    public func buttonStyle(_ type: ButtonType, _ dimensions: ButtonDimensions = .init(), padding: EdgeInsets? = nil) -> some View {
+        ModifiedContent(content: self, modifier: ButtonStyleModifier(style: type, dimensions: dimensions, padding: padding))
     }
 }
 
 struct AcademyButtonStyle: ButtonStyle {
     let size: ButtonSize
     let scheme: ButtonColorScheme
+    let textStyle: TextStyle
+    let dimensions: ButtonDimensions
+    let alignment: Alignment
+    let padding: EdgeInsets
+    
+    init(size: ButtonSize, scheme: ButtonColorScheme, textStyle: TextStyle, dimensions: ButtonDimensions, alignment: Alignment = .center, padding: EdgeInsets = .init()) {
+        self.size = size
+        self.scheme = scheme
+        self.textStyle = textStyle
+        self.dimensions = dimensions
+        self.alignment = alignment
+        self.padding = padding
+    }
     
     func makeBody(configuration: Self.Configuration) -> some View {
-        AcademyButton(size: size, scheme: scheme, configuration: configuration)
+        AcademyButton(size: size, scheme: scheme, textStyle: textStyle, dimensions: dimensions, alignment: alignment, padding: padding, configuration: configuration)
     }
     
     struct AcademyButton: View {
         let size: ButtonSize
         let scheme: ButtonColorScheme
+        let textStyle: TextStyle
+        let dimensions: ButtonDimensions
+        let alignment: Alignment
+        let padding: EdgeInsets
         let configuration: ButtonStyle.Configuration
         @Environment(\.isEnabled) private var isEnabled: Bool
         
         var body: some View {
             let colors = scheme.getCurrentColorSet(state: ButtonState.getState(isEnabled: isEnabled, isPressed: configuration.isPressed))
+            let (width, height) = dimensions.getSuggestedDimensions(for: size, padding: padding)
             
-            switch size {
-            case .large:
-                configuration.label
-                    .textStyle(.regularBold, color: colors.contentColor)
-                    .frame(minWidth: .suggestedLargeButtonWidth)
-                    .padding(20)
-                    .background(colors.backgroundColor)
-                    .cornerRadius(28)
-                    .ifLet(colors.borderColor) {
-                        $0.overlay(
-                            RoundedRectangle(cornerRadius: 28)
-                                .stroke($1, lineWidth: 2)
-                        )
-                    }
-                
-            case .medium:
-                configuration.label
-                    .textStyle(.regularBold, color: colors.contentColor)
-                    .frame(minWidth: .suggestedMediumButtonWidth)
-                    .padding(14)
-                    .background(colors.backgroundColor)
-                    .cornerRadius(28)
-                    .ifLet(colors.borderColor) {
-                        $0.overlay(
-                            RoundedRectangle(cornerRadius: 28)
-                                .stroke($1, lineWidth: 2)
-                        )
-                    }
-                
-            case .small:
-                configuration.label
-                    .textStyle(.smallBold, color: colors.contentColor)
-                    .frame(minWidth: .suggestedSmallButtonWidth)
-                    .padding(10)
-                    .background(colors.backgroundColor)
-                    .cornerRadius(28)
-                    .ifLet(colors.borderColor) {
-                        $0.overlay(
-                            RoundedRectangle(cornerRadius: 28)
-                                .stroke($1, lineWidth: 2)
-                        )
-                    }
-            }
+            configuration.label
+                .textStyle(textStyle, color: colors.contentColor)
+                .frame(minWidth: width, minHeight: height, alignment: alignment)
+                .padding(padding)
+                .lineLimit(0)
+                .background(colors.backgroundColor)
+                .cornerRadius(28)
+                .ifLet(colors.borderColor) {
+                    $0.overlay(
+                        RoundedRectangle(cornerRadius: 28)
+                            .stroke($1, lineWidth: 2)
+                    )
+                }
         }
     }
 }
@@ -190,6 +217,7 @@ struct Button_Previews : PreviewProvider {
         HStack(spacing: Spacing.medium.rawValue) {
             VStack {
                 Text("Large")
+                    .frame(width: 150)
                     .textStyle(.title1Bold)
                     .padding(.bottom, Spacing.medium.rawValue)
                 
@@ -212,6 +240,7 @@ struct Button_Previews : PreviewProvider {
             
             VStack {
                 Text("Medium")
+                    .frame(width: 150)
                     .textStyle(.title1Bold)
                     .padding(.bottom, Spacing.medium.rawValue)
                 
@@ -234,6 +263,7 @@ struct Button_Previews : PreviewProvider {
             
             VStack {
                 Text("Small")
+                    .frame(width: 120)
                     .textStyle(.title1Bold)
                     .padding(.bottom, Spacing.medium.rawValue)
                 

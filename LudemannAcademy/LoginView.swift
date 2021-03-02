@@ -65,16 +65,15 @@ struct LoginView: View {
                 SecureField("Password", text: self.$password)
                     .textFieldStyle(AcademyTextFieldStyle())
                     .autocapitalization(.none)
-                    .padding(.bottom, Spacing.xSmall.rawValue)
                 
                 HStack {
-                    Button("Log in", action: {
+                    Button("Forgot Password?", action: {
                         showingAlert.toggle()
                     })
                     .buttonStyle(.smallLink)
                     .textCase(.uppercase)
                     .padding(.leading, Spacing.small.rawValue)
-                    .padding(.bottom, Spacing.xxxLarge.rawValue)
+                    .padding(.bottom, Spacing.xxLarge.rawValue)
                     
                     Spacer()
                 }
