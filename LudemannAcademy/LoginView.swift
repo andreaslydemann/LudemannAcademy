@@ -57,13 +57,12 @@ struct LoginView: View {
                     .padding(.bottom, Spacing.xxLarge.rawValue)
                 
                 TextField("E-mail", text: self.$email)
-                    .textFieldStyle(AcademyTextFieldStyle())
+                    .textFieldStyle(.academyTextField)
                     .autocapitalization(.none)
                     .padding(.bottom, Spacing.xSmall.rawValue)
                 
-                
                 SecureField("Password", text: self.$password)
-                    .textFieldStyle(AcademyTextFieldStyle())
+                    .textFieldStyle(.academyTextField)
                     .autocapitalization(.none)
                 
                 HStack {
@@ -94,17 +93,6 @@ struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         LoginScreen()
             .preferredColorScheme(.dark)
-    }
-}
-
-struct AcademyTextFieldStyle: TextFieldStyle {
-    func _body(configuration: TextField<Self._Label>) -> some View {
-        configuration
-            .padding(.horizontal, Spacing.small.rawValue)
-            .padding(.vertical, Spacing.medium.rawValue)
-            .textStyle(.regularMediumSecondary)
-            .background(Color.academySurface)
-            .cornerRadius(16)
     }
 }
 
