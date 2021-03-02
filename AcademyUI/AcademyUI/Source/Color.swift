@@ -67,4 +67,10 @@ extension Color {
     public static var academyAttention: Color {
         Color("academy_attention", bundle: BundleProvider.currentBundle)
     }
+    
+    // MARK: - Clear
+    
+    public static var academyClear: Color {
+        Color("academy_clear", bundle: BundleProvider.currentBundle)
+    }
 }

@@ -134,19 +134,19 @@ struct ButtonStyleModifier: ViewModifier {
         case .largeSecondary:
             buttonStyle = AcademyButtonStyle(size: .large, scheme: ButtonColorScheme(content: .academyButtonSecondaryContent, background: .academyButtonSecondaryBackground), textStyle: .regularBold, dimensions: dimensions, padding: padding)
         case .largeOutlined:
-            buttonStyle = AcademyButtonStyle(size: .large, scheme: ButtonColorScheme(content: .academyText, background: .clear, border: .academyText), textStyle: .regularBold, dimensions: dimensions, padding: padding)
+            buttonStyle = AcademyButtonStyle(size: .large, scheme: ButtonColorScheme(content: .academyText, background: .academyClear, border: .academyText), textStyle: .regularBold, dimensions: dimensions, padding: padding)
         case .medium:
             buttonStyle = AcademyButtonStyle(size: .medium, scheme: ButtonColorScheme(content: .academyButtonContent, background: .academyButtonBackground), textStyle: .regularBold, dimensions: dimensions, padding: padding)
         case .mediumSecondary:
             buttonStyle = AcademyButtonStyle(size: .medium, scheme: ButtonColorScheme(content: .academyButtonSecondaryContent, background: .academyButtonSecondaryBackground), textStyle: .regularBold, dimensions: dimensions, padding: padding)
         case .mediumOutlined:
-            buttonStyle = AcademyButtonStyle(size: .medium, scheme: ButtonColorScheme(content: .academyText, background: .clear, border: .academyText), textStyle: .regularBold, dimensions: dimensions, padding: padding)
+            buttonStyle = AcademyButtonStyle(size: .medium, scheme: ButtonColorScheme(content: .academyText, background: .academyClear, border: .academyText), textStyle: .regularBold, dimensions: dimensions, padding: padding)
         case .small:
             buttonStyle = AcademyButtonStyle(size: .small, scheme: ButtonColorScheme(content: .academyButtonContent, background: .academyButtonBackground), textStyle: .smallBold, dimensions: dimensions, padding: padding)
         case .smallSecondary:
             buttonStyle = AcademyButtonStyle(size: .small, scheme: ButtonColorScheme(content: .academyButtonSecondaryContent, background: .academyButtonSecondaryBackground), textStyle: .smallBold, dimensions: dimensions, padding: padding)
         case .smallLink:
-            buttonStyle = AcademyButtonStyle(size: .small, scheme: ButtonColorScheme(content: .academySecondaryText, background: .clear), textStyle: .smallMedium, dimensions: dimensions, alignment: .leading, padding: self.padding ?? .init())
+            buttonStyle = AcademyButtonStyle(size: .small, scheme: ButtonColorScheme(content: .academySecondaryText, background: .academyClear), textStyle: .smallMedium, dimensions: dimensions, alignment: .leading, padding: self.padding ?? .init())
         }
         
         return AnyView(content.buttonStyle(buttonStyle))

@@ -81,7 +81,7 @@ struct LoginView: View {
                 Button("Log in", action: {
                     print("Button action")
                 })
-                .buttonStyle(.large)
+                .buttonStyle(.largeOutlined)
             }
             .padding(.horizontal)
             .adaptToKeyboard()
