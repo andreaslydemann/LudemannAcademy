@@ -134,16 +134,10 @@ struct AlertView: View {
                         .multilineTextAlignment(.center)
                         .padding(.bottom, Spacing.medium.rawValue)
                     
-                    Button(action: {
+                    Button("Got it!", action: {
                         showingAlert.toggle()
-                    }, label: {
-                        Text("Got it!")
-                            .textStyle(.regularBold, color: .academyText)
-                            .frame(width: geometry.size.width * 0.5)
-                            .padding(.vertical, 10)
-                            .background(Color.academySurface)
-                            .cornerRadius(28)
                     })
+                    .buttonStyle(.smallSecondary, .init(width: geometry.size.width * 0.5))
                 }
                 .padding(Spacing.medium.rawValue)
                 .background(Color.academySecondaryBackground)
