@@ -14,6 +14,7 @@ public enum ButtonType: CaseIterable {
     // small
     case small
     case smallSecondary
+    case smallOutlined
     case smallLink
 }
 
@@ -145,6 +146,8 @@ struct ButtonStyleModifier: ViewModifier {
             buttonStyle = AcademyButtonStyle(size: .small, scheme: ButtonColorScheme(content: .academyButtonContent, background: .academyButtonBackground), textStyle: .smallBold, dimensions: dimensions, padding: padding)
         case .smallSecondary:
             buttonStyle = AcademyButtonStyle(size: .small, scheme: ButtonColorScheme(content: .academyButtonSecondaryContent, background: .academyButtonSecondaryBackground), textStyle: .smallBold, dimensions: dimensions, padding: padding)
+        case .smallOutlined:
+            buttonStyle = AcademyButtonStyle(size: .small, scheme: ButtonColorScheme(content: .academyText, background: .academyClear, border: .academyText), textStyle: .regularBold, dimensions: dimensions, padding: padding)
         case .smallLink:
             buttonStyle = AcademyButtonStyle(size: .small, scheme: ButtonColorScheme(content: .academySecondaryText, background: .academyClear), textStyle: .smallMedium, dimensions: dimensions, alignment: .leading, padding: self.padding ?? .init())
         }
@@ -277,6 +280,11 @@ struct Button_Previews : PreviewProvider {
                 Button("smallSecondary", action: {})
                     .disabled(true)
                     .buttonStyle(.smallSecondary)
+                Button("smallOutlined", action: {})
+                    .buttonStyle(.smallOutlined)
+                Button("smallOutlined", action: {})
+                    .disabled(true)
+                    .buttonStyle(.smallOutlined)
                 Button("smallLink", action: {})
                     .buttonStyle(.smallLink)
                 Button("smallLink", action: {})
