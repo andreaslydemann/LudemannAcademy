@@ -10,10 +10,6 @@ import AcademyUI
 
 @main
 struct LudemannAcademyApp: App {
-    init() {
-        Font.registerCustomFonts()
-    }
-
     var body: some Scene {
         WindowGroup {
             ContentView()

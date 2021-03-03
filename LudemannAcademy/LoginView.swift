@@ -15,7 +15,12 @@ struct LoginScreen: View {
             }
             
             if showingAlert {
-                AlertView(showingAlert: $showingAlert)
+                AlertView(
+                    title: "Forgot your password?",
+                    message: "No problem. Write me an email and I’ll help you out.",
+                    buttonText: "Got it!",
+                    showingAlert: $showingAlert
+                )
             }
         }
         .background(Color.academyBackground)
@@ -93,54 +98,5 @@ struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         LoginScreen()
             .preferredColorScheme(.dark)
-    }
-}
-
-struct AlertView: View {
-    @Binding var showingAlert: Bool
-    @State var scale: CGFloat = 0.1
-    
-    var body: some View {
-        ZStack {
-            Rectangle()
-                .fill(Color.black)
-                .opacity(0.7)
-                .onTapGesture {
-                    showingAlert.toggle()
-                    
-                }
-            
-            GeometryReader { geometry in
-                VStack {
-                    Text("Forgot your password?")
-                        .textStyle(.largeBold)
-                        .padding(.bottom, Spacing.tiny.rawValue)
-                    
-                    Text("No problem. Write me an email and I’ll help you out.")
-                        .textStyle(.regularMediumSecondary)
-                        .fixedSize(horizontal: false, vertical: true)
-                        .multilineTextAlignment(.center)
-                        .padding(.bottom, Spacing.medium.rawValue)
-                    
-                    Button("Got it!", action: {
-                        showingAlert.toggle()
-                    })
-                    .buttonStyle(.smallSecondary, .init(width: geometry.size.width * 0.5))
-                }
-                .padding(Spacing.medium.rawValue)
-                .background(Color.academySecondaryBackground)
-                .cornerRadius(25)
-                .frame(width: geometry.size.width * 0.8,
-                       height: geometry.size.height * 0.2)
-                .position(x: geometry.size.width / 2,
-                          y: geometry.size.height / 2)
-            }
-            .scaleEffect(scale)
-            .onAppear {
-                withAnimation(.interactiveSpring()) {
-                    scale = 1
-                }
-            }
-        }
     }
 }
