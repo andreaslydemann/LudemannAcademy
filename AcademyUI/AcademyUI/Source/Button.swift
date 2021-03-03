@@ -194,7 +194,8 @@ struct AcademyButtonStyle: ButtonStyle {
         @Environment(\.isEnabled) private var isEnabled: Bool
         
         var body: some View {
-            let colors = scheme.getCurrentColorSet(state: ButtonState.getState(isEnabled: isEnabled, isPressed: configuration.isPressed))
+            let state = ButtonState.getState(isEnabled: isEnabled, isPressed: configuration.isPressed)
+            let colors = scheme.getCurrentColorSet(state: state)
             let (width, height) = dimensions.getSuggestedDimensions(for: size, padding: padding)
             
             configuration.label
@@ -207,7 +208,7 @@ struct AcademyButtonStyle: ButtonStyle {
                 .ifLet(colors.borderColor) {
                     $0.roundedBorder(radius: 28, color: $1)
                 }
-                .scaleEffect(configuration.isPressed ? 0.95 : 1)
+                .scaleEffect(state == .highlighted ? 0.95 : 1)
                 .animation(.linear(duration: 0.05))
         }
     }
