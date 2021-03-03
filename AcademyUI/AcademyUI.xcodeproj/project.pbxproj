@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		8E2AC4F125ED8C88007D2AB1 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2AC4F025ED8C88007D2AB1 /* Button.swift */; };
 		8E2AC4F225ED8C88007D2AB1 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2AC4F025ED8C88007D2AB1 /* Button.swift */; };
-		8E2AC4F825EE218A007D2AB1 /* View+ConditionalViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2AC4F725EE218A007D2AB1 /* View+ConditionalViewModifiers.swift */; };
-		8E2AC4F925EE218A007D2AB1 /* View+ConditionalViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2AC4F725EE218A007D2AB1 /* View+ConditionalViewModifiers.swift */; };
 		8E2AC50925EEBB40007D2AB1 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2AC50825EEBB40007D2AB1 /* TextField.swift */; };
 		8E2AC50A25EEBB41007D2AB1 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2AC50825EEBB40007D2AB1 /* TextField.swift */; };
 		8E2AC51425EEC426007D2AB1 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2AC51325EEC426007D2AB1 /* AlertView.swift */; };
@@ -69,7 +67,6 @@
 
 /* Begin PBXFileReference section */
 		8E2AC4F025ED8C88007D2AB1 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
-		8E2AC4F725EE218A007D2AB1 /* View+ConditionalViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+ConditionalViewModifiers.swift"; sourceTree = "<group>"; };
 		8E2AC50825EEBB40007D2AB1 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		8E2AC51325EEC426007D2AB1 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		8E2AC51E25EF6774007D2AB1 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
@@ -194,7 +191,6 @@
 				E11CA7FE25E5ABEA0077AF63 /* ContentWidth.swift */,
 				E12095BD25E6D3F2000E9E6F /* KeyboardActions.swift */,
 				8E2AC4F025ED8C88007D2AB1 /* Button.swift */,
-				8E2AC4F725EE218A007D2AB1 /* View+ConditionalViewModifiers.swift */,
 				8E2AC51E25EF6774007D2AB1 /* View+Extensions.swift */,
 			);
 			path = Source;
@@ -398,7 +394,6 @@
 				E12095BE25E6D3F2000E9E6F /* KeyboardActions.swift in Sources */,
 				8E2AC50925EEBB40007D2AB1 /* TextField.swift in Sources */,
 				E10D26D625E419D0003A21A0 /* TextStyle.swift in Sources */,
-				8E2AC4F825EE218A007D2AB1 /* View+ConditionalViewModifiers.swift in Sources */,
 				E11CA7FF25E5ABEA0077AF63 /* ContentWidth.swift in Sources */,
 				8E2AC51425EEC426007D2AB1 /* AlertView.swift in Sources */,
 				E105DF0F25E2E63E00D14B66 /* Font.swift in Sources */,
@@ -426,7 +421,6 @@
 				E12095BF25E6D3F2000E9E6F /* KeyboardActions.swift in Sources */,
 				8E2AC50A25EEBB41007D2AB1 /* TextField.swift in Sources */,
 				E10D26D725E419D0003A21A0 /* TextStyle.swift in Sources */,
-				8E2AC4F925EE218A007D2AB1 /* View+ConditionalViewModifiers.swift in Sources */,
 				E11CA80025E5ABEA0077AF63 /* ContentWidth.swift in Sources */,
 				8E2AC51525EEC426007D2AB1 /* AlertView.swift in Sources */,
 				E105DF1025E2E63E00D14B66 /* Font.swift in Sources */,
