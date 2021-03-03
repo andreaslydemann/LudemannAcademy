@@ -13,8 +13,8 @@ struct LoginScreen: View {
             }
         }
         .alert(isPresenting: $isPresentingAlert,
-               title: "hello",
-               message: "yo",
+               title: "Forgot your password?",
+               message: "No problem. Write me an email and I'll help you out.",
                buttons: [.init(title: "Got it!", type: .secondary)])
         .background(Color.academyBackground)
         .edgesIgnoringSafeArea(.all)
