@@ -205,10 +205,7 @@ struct AcademyButtonStyle: ButtonStyle {
                 .background(colors.backgroundColor)
                 .cornerRadius(28)
                 .ifLet(colors.borderColor) {
-                    $0.overlay(
-                        RoundedRectangle(cornerRadius: 28)
-                            .stroke($1, lineWidth: 2)
-                    )
+                    $0.roundedBorder(radius: 28, color: $1)
                 }
                 .scaleEffect(configuration.isPressed ? 0.95 : 1)
                 .animation(.linear(duration: 0.05))
