@@ -2,27 +2,20 @@ import SwiftUI
 import AcademyUI
 
 struct LoginScreen: View {
-    @State private var showingAlert = false
+    @State private var isPresentingAlert = false
     
     var body: some View {
-        ZStack {
-            GeometryReader { geometry in
-                ScrollView(.vertical) {
-                    LoginView(showingAlert: $showingAlert)
-                        .frame(width: geometry.size.width)
-                        .frame(minHeight: geometry.size.height)
-                }
-            }
-            
-            if showingAlert {
-                AlertView(
-                    title: "Forgot your password?",
-                    message: "No problem. Write me an email and I’ll help you out.",
-                    buttonText: "Got it!",
-                    showingAlert: $showingAlert
-                )
+        GeometryReader { geometry in
+            ScrollView(.vertical) {
+                LoginView(isPresentingAlert: $isPresentingAlert)
+                    .frame(width: geometry.size.width)
+                    .frame(minHeight: geometry.size.height)
             }
         }
+        .alert(isPresenting: $isPresentingAlert,
+               title: "hello",
+               message: "yo",
+               buttons: [.init(title: "Got it!", type: .secondary)])
         .background(Color.academyBackground)
         .edgesIgnoringSafeArea(.all)
     }
@@ -32,7 +25,7 @@ struct LoginView: View {
     @State private var email: String = ""
     @State private var password: String = ""
     @State private var editing = false
-    @Binding var showingAlert: Bool
+    @Binding var isPresentingAlert: Bool
     
     var body: some View {
         ZStack {
@@ -72,7 +65,7 @@ struct LoginView: View {
                 
                 HStack {
                     Button("Forgot Password?", action: {
-                        showingAlert.toggle()
+                        isPresentingAlert.toggle()
                     })
                     .buttonStyle(.smallLink)
                     .textCase(.uppercase)
