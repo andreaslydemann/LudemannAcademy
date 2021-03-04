@@ -7,6 +7,10 @@ extension Color {
     public static var academyPrimary: Color {
         Color("academy_primary", bundle: BundleProvider.currentBundle)
     }
+    
+    public static var academySecondary: Color {
+        Color("academy_secondary", bundle: BundleProvider.currentBundle)
+    }
 
     // MARK: - Background
 

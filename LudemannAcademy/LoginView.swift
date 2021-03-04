@@ -5,19 +5,23 @@ struct LoginScreen: View {
     @State private var isPresentingAlert = false
     
     var body: some View {
-        GeometryReader { geometry in
-            ScrollView(.vertical) {
-                LoginView(isPresentingAlert: $isPresentingAlert)
-                    .frame(width: geometry.size.width)
-                    .frame(minHeight: geometry.size.height)
+        ZStack {
+            GeometryReader { geometry in
+                ScrollView(.vertical) {
+                    LoginView(isPresentingAlert: $isPresentingAlert)
+                        .frame(width: geometry.size.width)
+                        .frame(minHeight: geometry.size.height)
+                }
             }
+            .alert(isPresenting: $isPresentingAlert,
+                   title: "Forgot your password?",
+                   message: "No problem. Write me an email and I'll help you out.",
+                   buttons: [.init(title: "Got it!", type: .secondary)])
+            .background(
+                LinearGradient(gradient: Gradient(colors: [Color.academySecondary.opacity(0.15), .clear]), startPoint: .top, endPoint: .bottom)
+                    .background(Color.academyBackground))
+            .edgesIgnoringSafeArea(.all)
         }
-        .alert(isPresenting: $isPresentingAlert,
-               title: "Forgot your password?",
-               message: "No problem. Write me an email and I'll help you out.",
-               buttons: [.init(title: "Got it!", type: .secondary)])
-        .background(Color.academyBackground)
-        .edgesIgnoringSafeArea(.all)
     }
 }
 
