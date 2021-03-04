@@ -83,6 +83,20 @@ struct LoginView: View {
                     print("Button action")
                 })
                 .buttonStyle(.large)
+                .padding(.bottom, Spacing.small.rawValue)
+
+                Button {
+                    print("Button pressed")
+                } label: {
+                    HStack {
+                        Text("Not signed up?")
+                            .textStyle(.regularMedium)
+                        Text("Get started")
+                            .textStyle(.regularBold, color: .academyPrimary)
+                    }
+                }
+                .buttonStyle(.smallLink)
+                .padding(.bottom, Spacing.small.rawValue)
             }
             .padding(.horizontal)
             .adaptToKeyboard()
