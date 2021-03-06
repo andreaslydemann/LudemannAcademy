@@ -54,7 +54,9 @@ struct LoginView: View {
                 
                 Text("Become an in-demand iOS developer..")
                     .textStyle(.regularMedium)
-                    .padding(.bottom, Spacing.xxLarge.rawValue)
+                
+                Spacer()
+                    .frame(maxHeight: Spacing.xxLarge.rawValue)
                 
                 TextField("E-mail", text: self.$email)
                     .textFieldStyle(.academyTextField)
@@ -77,7 +79,7 @@ struct LoginView: View {
                     Spacer()
                 }
                 
-                Spacer()
+                Spacer(minLength: 100)
             }
             
             VStack {
