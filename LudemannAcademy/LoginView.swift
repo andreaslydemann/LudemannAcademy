@@ -52,7 +52,7 @@ struct LoginView: View {
                 Text("Keep up with modern iOS practices.")
                     .textStyle(.regularMedium)
                 
-                Text("Become an in-demand iOS developer..")
+                Text("Become an in-demand iOS developer.")
                     .textStyle(.regularMedium)
                 
                 Spacer()
