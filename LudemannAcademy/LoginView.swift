@@ -7,21 +7,18 @@ struct LoginScreen: View {
     var body: some View {
         ZStack {
             GeometryReader { geometry in
-                ScrollView(.vertical) {
-                    LoginView(isPresentingAlert: $isPresentingAlert)
-                        .frame(width: geometry.size.width)
-                        .frame(minHeight: geometry.size.height)
-                }
+                LoginView(isPresentingAlert: $isPresentingAlert)
+                    .frame(width: geometry.size.width)
+                    .frame(height: geometry.size.height)
             }
             .alert(isPresenting: $isPresentingAlert,
                    title: "Forgot your password?",
                    message: "No problem. Write me an email and I'll help you out.",
                    buttons: [.init(title: "Got it!", type: .secondary)])
-            .background(
-                LinearGradient(gradient: Gradient(colors: [Color.academySecondary.opacity(0.15), .clear]), startPoint: .top, endPoint: .bottom)
-                    .background(Color.academyBackground))
-            .edgesIgnoringSafeArea(.all)
-        }
+            
+        }.background(
+            LinearGradient(gradient: Gradient(colors: [Color.academySecondary.opacity(0.15), .clear]), startPoint: .top, endPoint: .bottom)
+                .background(Color.academyBackground).edgesIgnoringSafeArea(.all))
     }
 }
 
@@ -32,8 +29,9 @@ struct LoginView: View {
     @Binding var isPresentingAlert: Bool
     
     var body: some View {
-        ZStack {
+        ZStack(alignment: .bottom) {
             VStack {
+                Spacer()
                 HStack(spacing: Spacing.small.rawValue) {
                     Image(named: "logo")
                         .resizable()
@@ -79,12 +77,16 @@ struct LoginView: View {
                     Spacer()
                 }
                 
+                Spacer()
+            }
+            
+            VStack {
                 Button("Log in", action: {
                     print("Button action")
                 })
                 .buttonStyle(.large)
                 .padding(.bottom, Spacing.small.rawValue)
-
+                
                 Button {
                     print("Button pressed")
                 } label: {
@@ -96,12 +98,11 @@ struct LoginView: View {
                     }
                 }
                 .buttonStyle(.smallLink)
-                .padding(.bottom, Spacing.small.rawValue)
             }
-            .padding(.horizontal)
-            .adaptToKeyboard()
-            .onTapDismissKeyboard()
         }
+        .padding(.bottom, Spacing.tiny.rawValue)
+        .padding(.horizontal)
+        .onTapDismissKeyboard()
     }
 }
 

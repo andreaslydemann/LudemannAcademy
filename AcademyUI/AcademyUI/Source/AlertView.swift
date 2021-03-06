@@ -100,7 +100,7 @@ public struct AlertView: View {
                     scale = 1
                 }
             }
-        }
+        }.edgesIgnoringSafeArea(.all)
     }
 }
 
