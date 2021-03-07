@@ -7,8 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E105DF5B25E2E87800D14B66 /* AcademyUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E105DF5A25E2E87800D14B66 /* AcademyUI.framework */; };
-		E105DF5C25E2E87800D14B66 /* AcademyUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E105DF5A25E2E87800D14B66 /* AcademyUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		87C0B66B25F5823700EA8A0B /* AcademyUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87C0B66225F5823700EA8A0B /* AcademyUI.framework */; };
+		87C0B67225F5823700EA8A0B /* AcademyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C0B67125F5823700EA8A0B /* AcademyUITests.swift */; };
+		87C0B67425F5823700EA8A0B /* AcademyUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 87C0B66425F5823700EA8A0B /* AcademyUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		87C0B69725F5826100EA8A0B /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C0B68B25F5824E00EA8A0B /* Color.swift */; };
+		87C0B69825F5826100EA8A0B /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C0B68D25F5824E00EA8A0B /* Spacing.swift */; };
+		87C0B69925F5826100EA8A0B /* TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C0B68E25F5824E00EA8A0B /* TextStyle.swift */; };
+		87C0B69A25F5826100EA8A0B /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C0B68F25F5824E00EA8A0B /* TextField.swift */; };
+		87C0B69B25F5826100EA8A0B /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C0B69125F5824E00EA8A0B /* AlertView.swift */; };
+		87C0B69C25F5826100EA8A0B /* ContentWidth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C0B69225F5824E00EA8A0B /* ContentWidth.swift */; };
+		87C0B69D25F5826100EA8A0B /* KeyboardActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C0B69325F5824E00EA8A0B /* KeyboardActions.swift */; };
+		87C0B69E25F5826100EA8A0B /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C0B69425F5824E00EA8A0B /* Button.swift */; };
+		87C0B69F25F5826100EA8A0B /* BundleProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C0B68A25F5824E00EA8A0B /* BundleProvider.swift */; };
+		87C0B6A025F5826100EA8A0B /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C0B68C25F5824E00EA8A0B /* Font.swift */; };
+		87C0B6A125F5826100EA8A0B /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C0B69525F5824E00EA8A0B /* View+Extensions.swift */; };
+		87C0B6A225F5826100EA8A0B /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C0B69025F5824E00EA8A0B /* Image.swift */; };
+		87C0B6AF25F5827200EA8A0B /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87C0B68725F5824D00EA8A0B /* Colors.xcassets */; };
+		87C0B6B025F5827200EA8A0B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87C0B68825F5824D00EA8A0B /* Images.xcassets */; };
+		87C0B6B525F5827E00EA8A0B /* SharpSans-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 87C0B68525F5824D00EA8A0B /* SharpSans-Medium.otf */; };
+		87C0B6B625F5827E00EA8A0B /* OcrB-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 87C0B68325F5824D00EA8A0B /* OcrB-Regular.ttf */; };
+		87C0B6B725F5827E00EA8A0B /* SharpSans-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 87C0B68425F5824D00EA8A0B /* SharpSans-Bold.otf */; };
+		87C0B6C125F582C000EA8A0B /* AcademyUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87C0B66225F5823700EA8A0B /* AcademyUI.framework */; };
+		87C0B6C225F582C000EA8A0B /* AcademyUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 87C0B66225F5823700EA8A0B /* AcademyUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E12095C525E6D476000E9E6F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12095C425E6D476000E9E6F /* LoginView.swift */; };
 		E1D52FD125E04E100049C642 /* LudemannAcademyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D52FD025E04E100049C642 /* LudemannAcademyApp.swift */; };
 		E1D52FD325E04E100049C642 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D52FD225E04E100049C642 /* ContentView.swift */; };
@@ -19,6 +39,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		87C0B66C25F5823700EA8A0B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E1D52FC525E04E100049C642 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 87C0B66125F5823700EA8A0B;
+			remoteInfo = AcademyUI;
+		};
+		87C0B66E25F5823700EA8A0B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E1D52FC525E04E100049C642 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E1D52FCC25E04E100049C642;
+			remoteInfo = LudemannAcademy;
+		};
+		87C0B6C325F582C000EA8A0B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E1D52FC525E04E100049C642 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 87C0B66125F5823700EA8A0B;
+			remoteInfo = AcademyUI;
+		};
 		E1D52FDF25E04E110049C642 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E1D52FC525E04E100049C642 /* Project object */;
@@ -36,13 +77,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		E105DF5D25E2E87800D14B66 /* Embed Frameworks */ = {
+		87C0B6C525F582C000EA8A0B /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				E105DF5C25E2E87800D14B66 /* AcademyUI.framework in Embed Frameworks */,
+				87C0B6C225F582C000EA8A0B /* AcademyUI.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -50,6 +91,29 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		87C0B66225F5823700EA8A0B /* AcademyUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AcademyUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		87C0B66425F5823700EA8A0B /* AcademyUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AcademyUI.h; sourceTree = "<group>"; };
+		87C0B66525F5823700EA8A0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87C0B66A25F5823700EA8A0B /* AcademyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AcademyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		87C0B67125F5823700EA8A0B /* AcademyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcademyUITests.swift; sourceTree = "<group>"; };
+		87C0B67325F5823700EA8A0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87C0B68325F5824D00EA8A0B /* OcrB-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OcrB-Regular.ttf"; sourceTree = "<group>"; };
+		87C0B68425F5824D00EA8A0B /* SharpSans-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SharpSans-Bold.otf"; sourceTree = "<group>"; };
+		87C0B68525F5824D00EA8A0B /* SharpSans-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SharpSans-Medium.otf"; sourceTree = "<group>"; };
+		87C0B68725F5824D00EA8A0B /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		87C0B68825F5824D00EA8A0B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		87C0B68A25F5824E00EA8A0B /* BundleProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleProvider.swift; sourceTree = "<group>"; };
+		87C0B68B25F5824E00EA8A0B /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		87C0B68C25F5824E00EA8A0B /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		87C0B68D25F5824E00EA8A0B /* Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacing.swift; sourceTree = "<group>"; };
+		87C0B68E25F5824E00EA8A0B /* TextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyle.swift; sourceTree = "<group>"; };
+		87C0B68F25F5824E00EA8A0B /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		87C0B69025F5824E00EA8A0B /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		87C0B69125F5824E00EA8A0B /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		87C0B69225F5824E00EA8A0B /* ContentWidth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentWidth.swift; sourceTree = "<group>"; };
+		87C0B69325F5824E00EA8A0B /* KeyboardActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardActions.swift; sourceTree = "<group>"; };
+		87C0B69425F5824E00EA8A0B /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		87C0B69525F5824E00EA8A0B /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		E105DF5A25E2E87800D14B66 /* AcademyUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AcademyUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E12095C425E6D476000E9E6F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		E1D52FCD25E04E100049C642 /* LudemannAcademy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LudemannAcademy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,11 +131,26 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		87C0B65F25F5823700EA8A0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87C0B66725F5823700EA8A0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87C0B66B25F5823700EA8A0B /* AcademyUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E1D52FCA25E04E100049C642 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E105DF5B25E2E87800D14B66 /* AcademyUI.framework in Frameworks */,
+				87C0B6C125F582C000EA8A0B /* AcademyUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +171,67 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		87C0B66325F5823700EA8A0B /* AcademyUI */ = {
+			isa = PBXGroup;
+			children = (
+				87C0B68925F5824D00EA8A0B /* Resources */,
+				87C0B69625F5824E00EA8A0B /* Source */,
+				87C0B66425F5823700EA8A0B /* AcademyUI.h */,
+				87C0B66525F5823700EA8A0B /* Info.plist */,
+			);
+			path = AcademyUI;
+			sourceTree = "<group>";
+		};
+		87C0B67025F5823700EA8A0B /* AcademyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				87C0B67125F5823700EA8A0B /* AcademyUITests.swift */,
+				87C0B67325F5823700EA8A0B /* Info.plist */,
+			);
+			path = AcademyUITests;
+			sourceTree = "<group>";
+		};
+		87C0B68625F5824D00EA8A0B /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				87C0B68325F5824D00EA8A0B /* OcrB-Regular.ttf */,
+				87C0B68425F5824D00EA8A0B /* SharpSans-Bold.otf */,
+				87C0B68525F5824D00EA8A0B /* SharpSans-Medium.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		87C0B68925F5824D00EA8A0B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				87C0B68625F5824D00EA8A0B /* Fonts */,
+				87C0B68725F5824D00EA8A0B /* Colors.xcassets */,
+				87C0B68825F5824D00EA8A0B /* Images.xcassets */,
+			);
+			name = Resources;
+			path = AcademyUI/../Resources;
+			sourceTree = "<group>";
+		};
+		87C0B69625F5824E00EA8A0B /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				87C0B68A25F5824E00EA8A0B /* BundleProvider.swift */,
+				87C0B68B25F5824E00EA8A0B /* Color.swift */,
+				87C0B68C25F5824E00EA8A0B /* Font.swift */,
+				87C0B68D25F5824E00EA8A0B /* Spacing.swift */,
+				87C0B68E25F5824E00EA8A0B /* TextStyle.swift */,
+				87C0B68F25F5824E00EA8A0B /* TextField.swift */,
+				87C0B69025F5824E00EA8A0B /* Image.swift */,
+				87C0B69125F5824E00EA8A0B /* AlertView.swift */,
+				87C0B69225F5824E00EA8A0B /* ContentWidth.swift */,
+				87C0B69325F5824E00EA8A0B /* KeyboardActions.swift */,
+				87C0B69425F5824E00EA8A0B /* Button.swift */,
+				87C0B69525F5824E00EA8A0B /* View+Extensions.swift */,
+			);
+			name = Source;
+			path = AcademyUI/../Source;
+			sourceTree = "<group>";
+		};
 		E105DF3225E2E73A00D14B66 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +246,8 @@
 				E1D52FCF25E04E100049C642 /* LudemannAcademy */,
 				E1D52FE125E04E110049C642 /* LudemannAcademyTests */,
 				E1D52FEC25E04E110049C642 /* LudemannAcademyUITests */,
+				87C0B66325F5823700EA8A0B /* AcademyUI */,
+				87C0B67025F5823700EA8A0B /* AcademyUITests */,
 				E1D52FCE25E04E100049C642 /* Products */,
 				E105DF3225E2E73A00D14B66 /* Frameworks */,
 			);
@@ -117,6 +259,8 @@
 				E1D52FCD25E04E100049C642 /* LudemannAcademy.app */,
 				E1D52FDE25E04E110049C642 /* LudemannAcademyTests.xctest */,
 				E1D52FE925E04E110049C642 /* LudemannAcademyUITests.xctest */,
+				87C0B66225F5823700EA8A0B /* AcademyUI.framework */,
+				87C0B66A25F5823700EA8A0B /* AcademyUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -162,7 +306,55 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		87C0B65D25F5823700EA8A0B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87C0B67425F5823700EA8A0B /* AcademyUI.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		87C0B66125F5823700EA8A0B /* AcademyUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87C0B67D25F5823700EA8A0B /* Build configuration list for PBXNativeTarget "AcademyUI" */;
+			buildPhases = (
+				87C0B65D25F5823700EA8A0B /* Headers */,
+				87C0B65E25F5823700EA8A0B /* Sources */,
+				87C0B65F25F5823700EA8A0B /* Frameworks */,
+				87C0B66025F5823700EA8A0B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AcademyUI;
+			productName = AcademyUI;
+			productReference = 87C0B66225F5823700EA8A0B /* AcademyUI.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		87C0B66925F5823700EA8A0B /* AcademyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87C0B67E25F5823700EA8A0B /* Build configuration list for PBXNativeTarget "AcademyUITests" */;
+			buildPhases = (
+				87C0B66625F5823700EA8A0B /* Sources */,
+				87C0B66725F5823700EA8A0B /* Frameworks */,
+				87C0B66825F5823700EA8A0B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				87C0B66D25F5823700EA8A0B /* PBXTargetDependency */,
+				87C0B66F25F5823700EA8A0B /* PBXTargetDependency */,
+			);
+			name = AcademyUITests;
+			productName = AcademyUITests;
+			productReference = 87C0B66A25F5823700EA8A0B /* AcademyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		E1D52FCC25E04E100049C642 /* LudemannAcademy */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E1D52FF225E04E110049C642 /* Build configuration list for PBXNativeTarget "LudemannAcademy" */;
@@ -170,11 +362,12 @@
 				E1D52FC925E04E100049C642 /* Sources */,
 				E1D52FCA25E04E100049C642 /* Frameworks */,
 				E1D52FCB25E04E100049C642 /* Resources */,
-				E105DF5D25E2E87800D14B66 /* Embed Frameworks */,
+				87C0B6C525F582C000EA8A0B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				87C0B6C425F582C000EA8A0B /* PBXTargetDependency */,
 			);
 			name = LudemannAcademy;
 			productName = LudemannAcademy;
@@ -223,9 +416,16 @@
 		E1D52FC525E04E100049C642 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1230;
+				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1230;
 				TargetAttributes = {
+					87C0B66125F5823700EA8A0B = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					87C0B66925F5823700EA8A0B = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = E1D52FCC25E04E100049C642;
+					};
 					E1D52FCC25E04E100049C642 = {
 						CreatedOnToolsVersion = 12.3;
 					};
@@ -255,11 +455,32 @@
 				E1D52FCC25E04E100049C642 /* LudemannAcademy */,
 				E1D52FDD25E04E110049C642 /* LudemannAcademyTests */,
 				E1D52FE825E04E110049C642 /* LudemannAcademyUITests */,
+				87C0B66125F5823700EA8A0B /* AcademyUI */,
+				87C0B66925F5823700EA8A0B /* AcademyUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		87C0B66025F5823700EA8A0B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87C0B6B525F5827E00EA8A0B /* SharpSans-Medium.otf in Resources */,
+				87C0B6B625F5827E00EA8A0B /* OcrB-Regular.ttf in Resources */,
+				87C0B6AF25F5827200EA8A0B /* Colors.xcassets in Resources */,
+				87C0B6B725F5827E00EA8A0B /* SharpSans-Bold.otf in Resources */,
+				87C0B6B025F5827200EA8A0B /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87C0B66825F5823700EA8A0B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E1D52FCB25E04E100049C642 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -286,6 +507,33 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		87C0B65E25F5823700EA8A0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87C0B69B25F5826100EA8A0B /* AlertView.swift in Sources */,
+				87C0B6A225F5826100EA8A0B /* Image.swift in Sources */,
+				87C0B69F25F5826100EA8A0B /* BundleProvider.swift in Sources */,
+				87C0B6A125F5826100EA8A0B /* View+Extensions.swift in Sources */,
+				87C0B6A025F5826100EA8A0B /* Font.swift in Sources */,
+				87C0B69D25F5826100EA8A0B /* KeyboardActions.swift in Sources */,
+				87C0B69925F5826100EA8A0B /* TextStyle.swift in Sources */,
+				87C0B69E25F5826100EA8A0B /* Button.swift in Sources */,
+				87C0B69725F5826100EA8A0B /* Color.swift in Sources */,
+				87C0B69825F5826100EA8A0B /* Spacing.swift in Sources */,
+				87C0B69C25F5826100EA8A0B /* ContentWidth.swift in Sources */,
+				87C0B69A25F5826100EA8A0B /* TextField.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87C0B66625F5823700EA8A0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87C0B67225F5823700EA8A0B /* AcademyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E1D52FC925E04E100049C642 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -315,6 +563,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		87C0B66D25F5823700EA8A0B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 87C0B66125F5823700EA8A0B /* AcademyUI */;
+			targetProxy = 87C0B66C25F5823700EA8A0B /* PBXContainerItemProxy */;
+		};
+		87C0B66F25F5823700EA8A0B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E1D52FCC25E04E100049C642 /* LudemannAcademy */;
+			targetProxy = 87C0B66E25F5823700EA8A0B /* PBXContainerItemProxy */;
+		};
+		87C0B6C425F582C000EA8A0B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 87C0B66125F5823700EA8A0B /* AcademyUI */;
+			targetProxy = 87C0B6C325F582C000EA8A0B /* PBXContainerItemProxy */;
+		};
 		E1D52FE025E04E110049C642 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E1D52FCC25E04E100049C642 /* LudemannAcademy */;
@@ -328,6 +591,106 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		87C0B67925F5823700EA8A0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = XX77A4QKHR;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = AcademyUI/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = andreaslydemann.AcademyUI;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		87C0B67A25F5823700EA8A0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = XX77A4QKHR;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = AcademyUI/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = andreaslydemann.AcademyUI;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		87C0B67B25F5823700EA8A0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XX77A4QKHR;
+				INFOPLIST_FILE = AcademyUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = andreaslydemann.AcademyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LudemannAcademy.app/LudemannAcademy";
+			};
+			name = Debug;
+		};
+		87C0B67C25F5823700EA8A0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XX77A4QKHR;
+				INFOPLIST_FILE = AcademyUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = andreaslydemann.AcademyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LudemannAcademy.app/LudemannAcademy";
+			};
+			name = Release;
+		};
 		E1D52FF025E04E110049C642 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -454,7 +817,7 @@
 				DEVELOPMENT_TEAM = XX77A4QKHR;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = LudemannAcademy/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -476,7 +839,7 @@
 				DEVELOPMENT_TEAM = XX77A4QKHR;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = LudemannAcademy/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -575,6 +938,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		87C0B67D25F5823700EA8A0B /* Build configuration list for PBXNativeTarget "AcademyUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87C0B67925F5823700EA8A0B /* Debug */,
+				87C0B67A25F5823700EA8A0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		87C0B67E25F5823700EA8A0B /* Build configuration list for PBXNativeTarget "AcademyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87C0B67B25F5823700EA8A0B /* Debug */,
+				87C0B67C25F5823700EA8A0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E1D52FC825E04E100049C642 /* Build configuration list for PBXProject "LudemannAcademy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -48,6 +48,16 @@
                ReferencedContainer = "container:LudemannAcademy.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "87C0B66925F5823700EA8A0B"
+               BuildableName = "AcademyUITests.xctest"
+               BlueprintName = "AcademyUITests"
+               ReferencedContainer = "container:LudemannAcademy.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
