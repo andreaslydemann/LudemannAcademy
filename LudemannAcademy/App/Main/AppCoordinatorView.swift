@@ -5,11 +5,17 @@ struct AppCoordinatorView: View {
     @ObservedObject var coordinator: AppCoordinator
 
     var body: some View {
-        if coordinator.isSignedIn {
-            HomeCoordinatorView(coordinator: coordinator.homeCoordinator)
-        } else {
-            LoginCoordinatorView(coordinator: coordinator.loginCoordinator)
-        }
+        ZStack {
+            if coordinator.appState == .app {
+                HomeCoordinatorView(coordinator: coordinator.homeCoordinator)
+                    .transition(.move(edge: .bottom))
+                    .zIndex(1)
+            } else if coordinator.appState == .signIn {
+                LoginCoordinatorView(coordinator: coordinator.loginCoordinator)
+                    .transition(.move(edge: .bottom))
+                    .zIndex(2)
+            }
+        }.animation(.easeInOut(duration: 0.5), value: coordinator.appState)
     }
 }
 

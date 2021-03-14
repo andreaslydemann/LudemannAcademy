@@ -209,7 +209,7 @@ struct AcademyButtonStyle: ButtonStyle {
                     $0.roundedBorder(radius: 28, color: $1)
                 }
                 .scaleEffect(state == .highlighted ? 0.95 : 1)
-                .animation(.linear(duration: 0.05))
+                .animation(.linear(duration: 0.05), value: state)
         }
     }
 }

@@ -95,10 +95,9 @@ public struct AlertView: View {
                           y: geometry.size.height / 2)
             }
             .scaleEffect(scale)
+            .animation(.interactiveSpring(response: 0.25), value: scale)
             .onAppear {
-                withAnimation(.interactiveSpring(response: 0.25)) {
-                    scale = 1
-                }
+                scale = 1
             }
         }.edgesIgnoringSafeArea(.all)
     }

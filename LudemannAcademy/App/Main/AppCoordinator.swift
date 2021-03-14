@@ -1,9 +1,13 @@
 import SwiftUI
 
+enum AppState {
+    case signIn, app
+}
+
 class AppCoordinator: ObservableObject {
     @Published var loginCoordinator: LoginCoordinator!
     @Published var homeCoordinator: HomeCoordinator!
-    @Published var isSignedIn: Bool = false
+    @Published var appState: AppState = .signIn
     
     init() {
         self.loginCoordinator = LoginCoordinator(parent: self)
@@ -11,10 +15,10 @@ class AppCoordinator: ObservableObject {
     }
     
     func signIn() {
-        isSignedIn = true
+        appState = .app
     }
     
     func signOut() {
-        isSignedIn = false
+        appState = .signIn
     }
 }

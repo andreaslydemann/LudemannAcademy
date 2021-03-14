@@ -6,6 +6,5 @@ struct LoginCoordinatorView: View {
 
     var body: some View {
         LoginScreen(viewModel: coordinator.viewModel)
-        
     }
 }
