@@ -2,18 +2,20 @@ import SwiftUI
 import AcademyUI
 
 struct LoginScreen: View {
+    @ObservedObject var viewModel: LoginViewModel
     @State private var isPresentingAlert = false
     
     var body: some View {
         ZStack {
             GeometryReader { geometry in
-                LoginView(isPresentingAlert: $isPresentingAlert)
+                LoginView(viewModel: viewModel,
+                          isPresentingAlert: $isPresentingAlert)
                     .frame(width: geometry.size.width)
                     .frame(height: geometry.size.height)
             }
             .alert(isPresenting: $isPresentingAlert,
-                   title: "Forgot your password?",
-                   message: "No problem. Write me an email and I'll help you out.",
+                   title: viewModel.alertTitle,
+                   message: viewModel.alertMessage,
                    buttons: [.init(title: "Got it!", type: .secondary)])
             
         }.background(
@@ -23,10 +25,13 @@ struct LoginScreen: View {
 }
 
 struct LoginView: View {
+    @ObservedObject var viewModel: LoginViewModel
+    
     @State private var email: String = ""
     @State private var password: String = ""
     @State private var editing = false
     @Binding var isPresentingAlert: Bool
+    @State private var isLoggedIn = false
     
     var body: some View {
         ZStack(alignment: .bottom) {
@@ -84,7 +89,7 @@ struct LoginView: View {
             
             VStack {
                 Button("Log in", action: {
-                    print("Button action")
+                    self.viewModel.signIn()
                 })
                 .buttonStyle(.large)
                 .padding(.bottom, Spacing.small.rawValue)
@@ -108,9 +113,9 @@ struct LoginView: View {
     }
 }
 
-struct LoginView_Previews: PreviewProvider {
+struct LoginScreen_Previews: PreviewProvider {
     static var previews: some View {
-        LoginScreen()
+        LoginScreen(viewModel: LoginViewModel(coordinator: LoginCoordinator(parent: AppCoordinator())))
             .preferredColorScheme(.dark)
     }
 }

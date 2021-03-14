@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		871C9EFF25FD1E5A003C02B3 /* View+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871C9EFE25FD1E5A003C02B3 /* View+Navigation.swift */; };
+		871C9F0525FD1E94003C02B3 /* SheetModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871C9F0425FD1E94003C02B3 /* SheetModifier.swift */; };
+		871C9F0B25FD1EBE003C02B3 /* PopoverModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871C9F0A25FD1EBE003C02B3 /* PopoverModifier.swift */; };
+		871C9F1725FD1F26003C02B3 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871C9F1625FD1F26003C02B3 /* LoginCoordinator.swift */; };
+		871C9F2525FD34C6003C02B3 /* LoginCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871C9F2425FD34C6003C02B3 /* LoginCoordinatorView.swift */; };
+		871C9F3425FD3664003C02B3 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871C9F3325FD3664003C02B3 /* HomeViewModel.swift */; };
+		871C9F3A25FD3690003C02B3 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871C9F3925FD3690003C02B3 /* LoginViewModel.swift */; };
+		8733C43425F7FF8C00D94F7C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8733C43325F7FF8C00D94F7C /* HomeView.swift */; };
 		87C0B66B25F5823700EA8A0B /* AcademyUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87C0B66225F5823700EA8A0B /* AcademyUI.framework */; };
 		87C0B67225F5823700EA8A0B /* AcademyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C0B67125F5823700EA8A0B /* AcademyUITests.swift */; };
 		87C0B67425F5823700EA8A0B /* AcademyUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 87C0B66425F5823700EA8A0B /* AcademyUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -30,9 +38,12 @@
 		87C0B6C125F582C000EA8A0B /* AcademyUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87C0B66225F5823700EA8A0B /* AcademyUI.framework */; };
 		87C0B6C225F582C000EA8A0B /* AcademyUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 87C0B66225F5823700EA8A0B /* AcademyUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		87C0B6D825F589F600EA8A0B /* intro_screen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 87C0B6D725F589F600EA8A0B /* intro_screen.mp4 */; };
+		87C5CFDB25FD5B08002762C3 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C5CFDA25FD5B08002762C3 /* HomeCoordinator.swift */; };
+		87C5CFE525FD5B14002762C3 /* HomeCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C5CFE425FD5B14002762C3 /* HomeCoordinatorView.swift */; };
+		87C5CFEF25FE2BF5002762C3 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C5CFEE25FE2BF5002762C3 /* AppCoordinator.swift */; };
+		87C5CFF625FE2C3A002762C3 /* AppCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C5CFF525FE2C3A002762C3 /* AppCoordinatorView.swift */; };
 		E12095C525E6D476000E9E6F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12095C425E6D476000E9E6F /* LoginView.swift */; };
 		E1D52FD125E04E100049C642 /* LudemannAcademyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D52FD025E04E100049C642 /* LudemannAcademyApp.swift */; };
-		E1D52FD325E04E100049C642 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D52FD225E04E100049C642 /* ContentView.swift */; };
 		E1D52FD525E04E110049C642 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1D52FD425E04E110049C642 /* Assets.xcassets */; };
 		E1D52FD825E04E110049C642 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1D52FD725E04E110049C642 /* Preview Assets.xcassets */; };
 		E1D52FE325E04E110049C642 /* LudemannAcademyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D52FE225E04E110049C642 /* LudemannAcademyTests.swift */; };
@@ -92,6 +103,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		871C9EFE25FD1E5A003C02B3 /* View+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Navigation.swift"; sourceTree = "<group>"; };
+		871C9F0425FD1E94003C02B3 /* SheetModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetModifier.swift; sourceTree = "<group>"; };
+		871C9F0A25FD1EBE003C02B3 /* PopoverModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverModifier.swift; sourceTree = "<group>"; };
+		871C9F1625FD1F26003C02B3 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		871C9F2425FD34C6003C02B3 /* LoginCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinatorView.swift; sourceTree = "<group>"; };
+		871C9F3325FD3664003C02B3 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		871C9F3925FD3690003C02B3 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		8733C43325F7FF8C00D94F7C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		87C0B66225F5823700EA8A0B /* AcademyUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AcademyUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87C0B66425F5823700EA8A0B /* AcademyUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AcademyUI.h; sourceTree = "<group>"; };
 		87C0B66525F5823700EA8A0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -116,11 +135,14 @@
 		87C0B69425F5824E00EA8A0B /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		87C0B69525F5824E00EA8A0B /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		87C0B6D725F589F600EA8A0B /* intro_screen.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = intro_screen.mp4; sourceTree = "<group>"; };
+		87C5CFDA25FD5B08002762C3 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		87C5CFE425FD5B14002762C3 /* HomeCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorView.swift; sourceTree = "<group>"; };
+		87C5CFEE25FE2BF5002762C3 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		87C5CFF525FE2C3A002762C3 /* AppCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorView.swift; sourceTree = "<group>"; };
 		E105DF5A25E2E87800D14B66 /* AcademyUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AcademyUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E12095C425E6D476000E9E6F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		E1D52FCD25E04E100049C642 /* LudemannAcademy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LudemannAcademy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1D52FD025E04E100049C642 /* LudemannAcademyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LudemannAcademyApp.swift; sourceTree = "<group>"; };
-		E1D52FD225E04E100049C642 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E1D52FD425E04E110049C642 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E1D52FD725E04E110049C642 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E1D52FD925E04E110049C642 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -173,6 +195,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		871C9EFD25FD1E41003C02B3 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				871C9F0A25FD1EBE003C02B3 /* PopoverModifier.swift */,
+				871C9F0425FD1E94003C02B3 /* SheetModifier.swift */,
+				871C9EFE25FD1E5A003C02B3 /* View+Navigation.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		871C9F1425FD1F02003C02B3 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				87C5CFF425FE2C12002762C3 /* Main */,
+				871C9F3225FD3611003C02B3 /* Home */,
+				871C9F1525FD1F09003C02B3 /* Login */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		871C9F1525FD1F09003C02B3 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				871C9F1625FD1F26003C02B3 /* LoginCoordinator.swift */,
+				871C9F2425FD34C6003C02B3 /* LoginCoordinatorView.swift */,
+				E12095C425E6D476000E9E6F /* LoginView.swift */,
+				871C9F3925FD3690003C02B3 /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		871C9F3225FD3611003C02B3 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				87C5CFDA25FD5B08002762C3 /* HomeCoordinator.swift */,
+				87C5CFE425FD5B14002762C3 /* HomeCoordinatorView.swift */,
+				8733C43325F7FF8C00D94F7C /* HomeView.swift */,
+				871C9F3325FD3664003C02B3 /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		87C0B66325F5823700EA8A0B /* AcademyUI */ = {
 			isa = PBXGroup;
 			children = (
@@ -218,6 +282,7 @@
 		87C0B69625F5824E00EA8A0B /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				871C9EFD25FD1E41003C02B3 /* Navigation */,
 				87C0B68A25F5824E00EA8A0B /* BundleProvider.swift */,
 				87C0B68B25F5824E00EA8A0B /* Color.swift */,
 				87C0B68C25F5824E00EA8A0B /* Font.swift */,
@@ -241,6 +306,16 @@
 				87C0B6D725F589F600EA8A0B /* intro_screen.mp4 */,
 			);
 			path = Videos;
+			sourceTree = "<group>";
+		};
+		87C5CFF425FE2C12002762C3 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				87C5CFEE25FE2BF5002762C3 /* AppCoordinator.swift */,
+				87C5CFF525FE2C3A002762C3 /* AppCoordinatorView.swift */,
+				E1D52FD025E04E100049C642 /* LudemannAcademyApp.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		E105DF3225E2E73A00D14B66 /* Frameworks */ = {
@@ -279,9 +354,7 @@
 		E1D52FCF25E04E100049C642 /* LudemannAcademy */ = {
 			isa = PBXGroup;
 			children = (
-				E1D52FD025E04E100049C642 /* LudemannAcademyApp.swift */,
-				E1D52FD225E04E100049C642 /* ContentView.swift */,
-				E12095C425E6D476000E9E6F /* LoginView.swift */,
+				871C9F1425FD1F02003C02B3 /* App */,
 				E1D52FD425E04E110049C642 /* Assets.xcassets */,
 				E1D52FD925E04E110049C642 /* Info.plist */,
 				E1D52FD625E04E110049C642 /* Preview Content */,
@@ -525,16 +598,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				87C0B69B25F5826100EA8A0B /* AlertView.swift in Sources */,
+				871C9F0B25FD1EBE003C02B3 /* PopoverModifier.swift in Sources */,
 				87C0B6A225F5826100EA8A0B /* Image.swift in Sources */,
 				87C0B69F25F5826100EA8A0B /* BundleProvider.swift in Sources */,
 				87C0B6A125F5826100EA8A0B /* View+Extensions.swift in Sources */,
 				87C0B6A025F5826100EA8A0B /* Font.swift in Sources */,
 				87C0B69D25F5826100EA8A0B /* KeyboardActions.swift in Sources */,
+				871C9EFF25FD1E5A003C02B3 /* View+Navigation.swift in Sources */,
 				87C0B69925F5826100EA8A0B /* TextStyle.swift in Sources */,
 				87C0B69E25F5826100EA8A0B /* Button.swift in Sources */,
 				87C0B69725F5826100EA8A0B /* Color.swift in Sources */,
 				87C0B69825F5826100EA8A0B /* Spacing.swift in Sources */,
 				87C0B69C25F5826100EA8A0B /* ContentWidth.swift in Sources */,
+				871C9F0525FD1E94003C02B3 /* SheetModifier.swift in Sources */,
 				87C0B69A25F5826100EA8A0B /* TextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -551,9 +627,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87C5CFEF25FE2BF5002762C3 /* AppCoordinator.swift in Sources */,
 				E12095C525E6D476000E9E6F /* LoginView.swift in Sources */,
-				E1D52FD325E04E100049C642 /* ContentView.swift in Sources */,
+				87C5CFDB25FD5B08002762C3 /* HomeCoordinator.swift in Sources */,
+				871C9F3425FD3664003C02B3 /* HomeViewModel.swift in Sources */,
+				87C5CFE525FD5B14002762C3 /* HomeCoordinatorView.swift in Sources */,
+				871C9F1725FD1F26003C02B3 /* LoginCoordinator.swift in Sources */,
+				871C9F3A25FD3690003C02B3 /* LoginViewModel.swift in Sources */,
 				E1D52FD125E04E100049C642 /* LudemannAcademyApp.swift in Sources */,
+				8733C43425F7FF8C00D94F7C /* HomeView.swift in Sources */,
+				871C9F2525FD34C6003C02B3 /* LoginCoordinatorView.swift in Sources */,
+				87C5CFF625FE2C3A002762C3 /* AppCoordinatorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -872,7 +956,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XX77A4QKHR;
 				INFOPLIST_FILE = LudemannAcademyTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -894,7 +978,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XX77A4QKHR;
 				INFOPLIST_FILE = LudemannAcademyTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -915,6 +999,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XX77A4QKHR;
 				INFOPLIST_FILE = LudemannAcademyUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -935,6 +1020,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XX77A4QKHR;
 				INFOPLIST_FILE = LudemannAcademyUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

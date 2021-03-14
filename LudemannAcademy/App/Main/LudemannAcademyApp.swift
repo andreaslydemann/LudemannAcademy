@@ -3,9 +3,11 @@ import AcademyUI
 
 @main
 struct LudemannAcademyApp: App {
+    @StateObject var coordinator = AppCoordinator()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AppCoordinatorView(coordinator: coordinator)
         }
     }
 }
